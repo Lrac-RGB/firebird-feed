@@ -50,6 +50,7 @@
     border-bottom:1px solid var(--line);
   }
   .embers{position:absolute;inset:0;pointer-events:none;z-index:0}
+  .hero-phoenix{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
   .ember{
     position:absolute;bottom:-12px;width:4px;height:4px;border-radius:50%;
     background:var(--spark);box-shadow:0 0 8px 2px rgba(255,140,60,.7);
@@ -254,6 +255,68 @@
 
 <header class="hero">
   <div class="embers" id="embers" aria-hidden="true"></div>
+
+  <!-- Swooping phoenix hero background -->
+  <svg class="hero-phoenix" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice">
+    <defs>
+      <linearGradient id="hpg" x1="0.5" y1="0" x2="0.5" y2="1">
+        <stop offset="0%"   stop-color="#ffc24a"/>
+        <stop offset="40%"  stop-color="#ff8a3d"/>
+        <stop offset="100%" stop-color="#ff4d1c"/>
+      </linearGradient>
+      <radialGradient id="halo" cx="75%" cy="44%" r="46%">
+        <stop offset="0%"   stop-color="#ff8a3d" stop-opacity="0.10"/>
+        <stop offset="100%" stop-color="#ff4d1c" stop-opacity="0"/>
+      </radialGradient>
+    </defs>
+
+    <!-- Ambient glow behind the bird -->
+    <rect width="1200" height="520" fill="url(#halo)"/>
+
+    <!-- Phoenix swooping: rotated -10° around its center (900, 240) -->
+    <g fill="url(#hpg)" opacity="0.13" transform="rotate(-10, 900, 240)">
+
+      <!-- LEFT WING: sweeps far left from body -->
+      <path d="M872 215
+               C 740 178, 550 145, 310 136
+               C 272 134, 252 142, 268 156
+               C 318 178, 510 210, 660 248
+               C 738 268, 810 294, 862 312
+               Z"/>
+
+      <!-- RIGHT WING: shorter, angled downward for banking look -->
+      <path d="M930 215
+               C 1022 172, 1112 150, 1174 162
+               C 1190 166, 1192 176, 1184 184
+               C 1158 204, 1082 244, 1008 278
+               C 976 292, 956 306, 942 318
+               Z"/>
+
+      <!-- BODY: teardrop, tall and narrow -->
+      <path d="M900 58
+               C 887 112, 874 196, 876 276
+               C 877 322, 890 360, 900 390
+               C 910 360, 923 322, 924 276
+               C 926 196, 913 112, 900 58
+               Z"/>
+
+      <!-- HEAD -->
+      <ellipse cx="900" cy="64" rx="36" ry="32"/>
+
+      <!-- CREST: 3 upswept feathers -->
+      <path d="M900 34 C 893 16 885  4 890 -10 C 897  5 900 20 900 34Z"/>
+      <path d="M900 34 C 900 14 898  1 900 -14 C 902  1 900 14 900 34Z"/>
+      <path d="M900 34 C 907 16 915  4 910 -10 C 903  5 900 20 900 34Z"/>
+
+      <!-- TAIL: 5 flame feathers streaming behind -->
+      <path d="M900 390 C 900 425 900 460 900 484 C 900 460 900 425 900 390Z"/>
+      <path d="M891 393 C 879 428 874 464 880 488 C 888 464 894 428 900 400Z"/>
+      <path d="M909 393 C 921 428 926 464 920 488 C 912 464 906 428 900 400Z"/>
+      <path d="M878 397 C 862 434 856 472 864 496 C 874 471 884 434 894 406Z"/>
+      <path d="M922 397 C 938 434 944 472 936 496 C 926 471 916 434 906 406Z"/>
+    </g>
+  </svg>
   <div class="hero-inner">
     <p class="eyebrow">
       <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
