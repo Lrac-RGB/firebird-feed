@@ -255,65 +255,42 @@
 <header class="hero">
   <div class="embers" id="embers" aria-hidden="true"></div>
 
-  <!-- Swooping phoenix hero background -->
+  <!-- Phoenix face hero background -->
   <svg class="hero-phoenix" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
        viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice">
     <defs>
-      <linearGradient id="hpg" x1="0.5" y1="0" x2="0.5" y2="1">
-        <stop offset="0%"   stop-color="#ffc24a"/>
-        <stop offset="40%"  stop-color="#ff8a3d"/>
-        <stop offset="100%" stop-color="#ff4d1c"/>
-      </linearGradient>
-      <radialGradient id="halo" cx="75%" cy="44%" r="46%">
-        <stop offset="0%"   stop-color="#ff8a3d" stop-opacity="0.10"/>
+      <radialGradient id="halo" cx="76%" cy="48%" r="44%">
+        <stop offset="0%"   stop-color="#ff8a3d" stop-opacity="0.13"/>
         <stop offset="100%" stop-color="#ff4d1c" stop-opacity="0"/>
       </radialGradient>
+      <linearGradient id="hpg" x1="0.5" y1="0" x2="0.5" y2="1">
+        <stop offset="0%"   stop-color="#ffc24a"/>
+        <stop offset="45%"  stop-color="#ff8a3d"/>
+        <stop offset="100%" stop-color="#ff4d1c"/>
+      </linearGradient>
     </defs>
 
-    <!-- Ambient glow behind the bird -->
+    <!-- Warm glow halo -->
     <rect width="1200" height="520" fill="url(#halo)"/>
 
-    <!-- Phoenix swooping: rotated -10° around its center (900, 240) -->
-    <g fill="url(#hpg)" opacity="0.13" transform="rotate(-10, 900, 240)">
-
-      <!-- LEFT WING: sweeps far left from body -->
-      <path d="M872 215
-               C 740 178, 550 145, 310 136
-               C 272 134, 252 142, 268 156
-               C 318 178, 510 210, 660 248
-               C 738 268, 810 294, 862 312
-               Z"/>
-
-      <!-- RIGHT WING: shorter, angled downward for banking look -->
-      <path d="M930 215
-               C 1022 172, 1112 150, 1174 162
-               C 1190 166, 1192 176, 1184 184
-               C 1158 204, 1082 244, 1008 278
-               C 976 292, 956 306, 942 318
-               Z"/>
-
-      <!-- BODY: teardrop, tall and narrow -->
-      <path d="M900 58
-               C 887 112, 874 196, 876 276
-               C 877 322, 890 360, 900 390
-               C 910 360, 923 322, 924 276
-               C 926 196, 913 112, 900 58
-               Z"/>
-
+    <!-- Ghost phoenix face — source 100×106, scale=4.6, center at (920,270) -->
+    <!-- translate = (920 - 50*4.6, 270 - 65*4.6) = (690, -29) -->
+    <g fill="url(#hpg)" opacity="0.11" transform="translate(690,-29) scale(4.6)">
+      <!-- CREST plumes -->
+      <path d="M 50 29 C 47 17 46  9 49  3 C 53  9 54 17 53 29 Z"/>
+      <path d="M 41 32 C 37 20 37 12 41  6 C 44 12 44 20 44 32 Z"/>
+      <path d="M 59 32 C 63 20 63 12 59  6 C 56 12 56 20 56 32 Z"/>
+      <path d="M 32 37 C 27 25 28 17 32 11 C 35 17 35 25 36 37 Z"/>
+      <path d="M 68 37 C 73 25 72 17 68 11 C 65 17 65 25 64 37 Z"/>
       <!-- HEAD -->
-      <ellipse cx="900" cy="64" rx="36" ry="32"/>
-
-      <!-- CREST: 3 upswept feathers -->
-      <path d="M900 34 C 893 16 885  4 890 -10 C 897  5 900 20 900 34Z"/>
-      <path d="M900 34 C 900 14 898  1 900 -14 C 902  1 900 14 900 34Z"/>
-      <path d="M900 34 C 907 16 915  4 910 -10 C 903  5 900 20 900 34Z"/>
-
-      <!-- TAIL: 5 flame feathers streaming behind -->
-      <path d="M900 390 C 900 425 900 460 900 484 C 900 460 900 425 900 390Z"/>
-      <path d="M891 393 C 879 428 874 464 880 488 C 888 464 894 428 900 400Z"/>
-      <path d="M909 393 C 921 428 926 464 920 488 C 912 464 906 428 900 400Z"/>
-      <path d="M878 397 C 862 434 856 472 864 496 C 874 471 884 434 894 406Z"/>
-      <path d="M922 397 C 938 434 944 472 936 496 C 926 471 916 434 906 406Z"/>
+      <ellipse cx="50" cy="65" rx="38" ry="36"/>
+      <!-- EYE sockets (dark patches convey the fierce look even in silhouette) -->
+      <ellipse cx="33" cy="58" rx="11" ry="10" fill="#1a0800" opacity="0.4"/>
+      <ellipse cx="67" cy="58" rx="11" ry="10" fill="#1a0800" opacity="0.4"/>
+      <!-- BEAK -->
+      <path d="M 43 71 C 43 74 46 80 50 86 C 54 80 57 74 57 71 C 54 69 50 68 46 69 Z"/>
+      <!-- Neck ruff -->
+      <path d="M 14 100 C 26 93 38 90 50 90 C 62 90 74 93 86 100" stroke="url(#hpg)" stroke-width="2" fill="none"/>
     </g>
   </svg>
   <div class="hero-inner">
@@ -324,8 +301,8 @@
       </svg>
       Phoenixville · Chester County, PA
     </p>
-    <img src="logo.svg" alt="Phoenixville Events" style="width:min(520px,90vw);height:auto;display:block;margin-bottom:.6rem">
-    <p class="lede">First Fridays, the Colonial marquee, the Saturday market, live music on Bridge Street, and every bar worth knowing — pulled together from the town's civic and cultural sources so you never miss what's lighting up Phoenixville.</p>
+    <img src="logo.svg" alt="Phoenixville Events" style="width:min(960px,90vw);height:auto;display:block;margin-bottom:.8rem">
+    <p class="lede" style="font-size:clamp(1.9rem,3.8vw,2.2rem);max-width:36ch">First Fridays, the Colonial marquee, the Saturday market, live music on Bridge Street, and every bar worth knowing.</p>
     <div class="molten"></div>
     <div class="stats">
       <div class="stat"><b id="stat-events">—</b><span>Listings &amp; venues</span></div>

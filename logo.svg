@@ -1,88 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 530 130" role="img" aria-label="Phoenixville Pennsylvania">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 130" role="img" aria-label="Phoenixville Events">
   <defs>
-    <linearGradient id="lw" x1="1" y1="0" x2="0" y2="0">
-      <stop offset="0%"   stop-color="#7a1800"/>
-      <stop offset="38%"  stop-color="#d63200"/>
-      <stop offset="70%"  stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#ffcc00"/>
-    </linearGradient>
-    <linearGradient id="rw" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%"   stop-color="#7a1800"/>
-      <stop offset="38%"  stop-color="#d63200"/>
-      <stop offset="70%"  stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#ffcc00"/>
-    </linearGradient>
-    <linearGradient id="flame" x1="0.5" y1="1" x2="0.5" y2="0">
-      <stop offset="0%"   stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#ffee00"/>
-    </linearGradient>
-    <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="148" y1="30" x2="528" y2="110">
+    <radialGradient id="hd" cx="50%" cy="42%" r="56%">
+      <stop offset="0%"   stop-color="#ff8c00"/>
+      <stop offset="52%"  stop-color="#d63200"/>
+      <stop offset="100%" stop-color="#7a1800"/>
+    </radialGradient>
+    <radialGradient id="ey" cx="36%" cy="30%" r="62%">
+      <stop offset="0%"   stop-color="#ffee44"/>
+      <stop offset="55%"  stop-color="#ffcc00"/>
+      <stop offset="100%" stop-color="#cc8800"/>
+    </radialGradient>
+    <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="148" y1="30" x2="538" y2="110">
       <stop offset="0%"   stop-color="#cc3200"/>
       <stop offset="45%"  stop-color="#d63200"/>
       <stop offset="100%" stop-color="#ff8c00"/>
     </linearGradient>
   </defs>
 
-  <!-- Wings: source 160×88, scaled to 126×69, centered vertically in 130px → translate(2, 30) scale(0.790) -->
-  <g transform="translate(2, 30) scale(0.790)">
+  <!-- Phoenix face: source 100×106, scale=1.226 → 123×130px -->
+  <g transform="scale(1.226)">
 
-    <!-- LEFT WING -->
-    <path d="M 78 76
-             C 60 62 38 44 14 18
-             C 10 14 8 18 10 22
-             C 32 46 58 64 76 82
-             Z"
-          fill="url(#lw)" stroke="#5a1200" stroke-width="1.3"/>
-    <path d="M 76 82 C 54 68 32 50 12 28" stroke="#aa3300" stroke-width=".9" fill="none" opacity="0.7"/>
+    <!-- CREST -->
+    <path d="M 50 29 C 47 17 46  9 49  3 C 53  9 54 17 53 29 Z" fill="#ffee88" stroke="#bb5500" stroke-width=".9"/>
+    <path d="M 41 32 C 37 20 37 12 41  6 C 44 12 44 20 44 32 Z" fill="#ffe066" stroke="#bb5500" stroke-width=".9"/>
+    <path d="M 59 32 C 63 20 63 12 59  6 C 56 12 56 20 56 32 Z" fill="#ffe066" stroke="#bb5500" stroke-width=".9"/>
+    <path d="M 32 37 C 27 25 28 17 32 11 C 35 17 35 25 36 37 Z" fill="#ffcc44" stroke="#bb5500" stroke-width=".9"/>
+    <path d="M 68 37 C 73 25 72 17 68 11 C 65 17 65 25 64 37 Z" fill="#ffcc44" stroke="#bb5500" stroke-width=".9"/>
 
-    <!-- Left flame feathers -->
-    <path d="M 14 18 C 10  8  9  2 12 -2 C 15  4 14 12 15 20 Z" fill="#ffcc00" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 21 13 C 18  3 18 -2 21 -4 C 23  2 22 10 22 15 Z" fill="#ffd900" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 28 10 C 26  0 27 -4 30 -5 C 32  1 31  8 30 12 Z" fill="#ffdd55" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 35  8 C 34  0 35 -4 38 -4 C 39  2 38  8 37 10 Z" fill="#ffe577" stroke="#aa4400" stroke-width=".8"/>
+    <!-- HEAD -->
+    <ellipse cx="50" cy="65" rx="38" ry="36" fill="url(#hd)" stroke="#6b1800" stroke-width="1.6"/>
 
-    <!-- Left wisps -->
-    <path d="M 40 50 C 39 44 38 39 40 36 C 42 40 41 45 42 51 Z" fill="url(#flame)" opacity="0.8"/>
-    <path d="M 54 60 C 53 53 52 47 54 44 C 56 48 55 54 56 61 Z" fill="url(#flame)" opacity="0.7"/>
-    <path d="M 66 68 C 65 62 65 56 67 53 C 68 57 68 63 68 69 Z" fill="url(#flame)" opacity="0.6"/>
+    <!-- Brow ridges -->
+    <path d="M 18 51 C 22 45 30 43 44 48" stroke="#5a0a00" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+    <path d="M 82 51 C 78 45 70 43 56 48" stroke="#5a0a00" stroke-width="3.2" stroke-linecap="round" fill="none"/>
 
-    <!-- RIGHT WING -->
-    <path d="M 82 76
-             C 100 62 122 44 146 18
-             C 150 14 152 18 150 22
-             C 128 46 102 64 84 82
-             Z"
-          fill="url(#rw)" stroke="#5a1200" stroke-width="1.3"/>
-    <path d="M 84 82 C 106 68 128 50 148 28" stroke="#aa3300" stroke-width=".9" fill="none" opacity="0.7"/>
+    <!-- Eye socket shadow -->
+    <ellipse cx="33" cy="58" rx="11" ry="10" fill="#7a1800" opacity="0.4"/>
+    <ellipse cx="67" cy="58" rx="11" ry="10" fill="#7a1800" opacity="0.4"/>
 
-    <!-- Right flame feathers -->
-    <path d="M 146 18 C 150  8 151  2 148 -2 C 145  4 146 12 145 20 Z" fill="#ffcc00" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 139 13 C 142  3 142 -2 139 -4 C 137  2 138 10 138 15 Z" fill="#ffd900" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 132 10 C 134  0 133 -4 130 -5 C 128  1 129  8 130 12 Z" fill="#ffdd55" stroke="#aa4400" stroke-width=".8"/>
-    <path d="M 125  8 C 126  0 125 -4 122 -4 C 121  2 122  8 123 10 Z" fill="#ffe577" stroke="#aa4400" stroke-width=".8"/>
+    <!-- EYES -->
+    <circle cx="33" cy="58" r="9.5" fill="url(#ey)" stroke="#6b1800" stroke-width="1.4"/>
+    <circle cx="33" cy="58" r="4.8" fill="#1a0800"/>
+    <circle cx="34" cy="56" r="1.8" fill="white" opacity="0.85"/>
+    <circle cx="67" cy="58" r="9.5" fill="url(#ey)" stroke="#6b1800" stroke-width="1.4"/>
+    <circle cx="67" cy="58" r="4.8" fill="#1a0800"/>
+    <circle cx="68" cy="56" r="1.8" fill="white" opacity="0.85"/>
 
-    <!-- Right wisps -->
-    <path d="M 120 50 C 121 44 122 39 120 36 C 118 40 119 45 118 51 Z" fill="url(#flame)" opacity="0.8"/>
-    <path d="M 106 60 C 107 53 108 47 106 44 C 104 48 105 54 104 61 Z" fill="url(#flame)" opacity="0.7"/>
-    <path d="M  94 68 C  95 62  95 56  93 53 C  92 57  92 63  92 69 Z" fill="url(#flame)" opacity="0.6"/>
+    <!-- Lower eyelid -->
+    <path d="M 23 64 C 28 68 38 68 43 64" stroke="#5a0a00" stroke-width="1.4" fill="none"/>
+    <path d="M 77 64 C 72 68 62 68 57 64" stroke="#5a0a00" stroke-width="1.4" fill="none"/>
 
-    <!-- Central flame -->
-    <path d="M 80 72 C 77 62 77 54 80 48 C 83 54 83 62 80 72 Z" fill="#ff8800" stroke="#5a1200" stroke-width=".9"/>
-    <path d="M 80 68 C 78 58 79 52 80 46 C 81 52 82 58 80 68 Z" fill="#ffcc00" opacity="0.6"/>
+    <!-- Cheek texture -->
+    <path d="M 16 66 C 22 60 30 58 42 60" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 14 75 C 20 69 29 67 41 69" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 84 66 C 78 60 70 58 58 60" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 86 75 C 80 69 71 67 59 69" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+
+    <!-- BEAK -->
+    <path d="M 43 71 C 43 74 46 80 50 86 C 54 80 57 74 57 71 C 54 69 50 68 46 69 Z"
+          fill="#cc5500" stroke="#6b1800" stroke-width="1.3"/>
+    <path d="M 48 84 C 48 88 50 91 52 88 C 51 86 50 84 50 84 Z"
+          fill="#aa3a00" stroke="#6b1800" stroke-width="1"/>
+    <path d="M 45 77 C 46 81 50 84 54 81 C 53 78 50 76 47 77 Z"
+          fill="#bb4800" stroke="#6b1800" stroke-width="1"/>
+    <path d="M 44 77 C 47 75 53 75 56 77" stroke="#3a0c00" stroke-width=".9" fill="none"/>
+
+    <!-- Neck ruff -->
+    <path d="M 20 92 C 30 86 40 84 50 84 C 60 84 70 86 80 92" stroke="#8c1c00" stroke-width="1.2" fill="none"/>
+    <path d="M 14 100 C 26 93 38 90 50 90 C 62 90 74 93 86 100" stroke="#7a1800" stroke-width="1" fill="none" opacity="0.65"/>
   </g>
 
   <!-- Divider -->
-  <rect x="132" y="12" width="1.5" height="106" rx="1" fill="#cc5500" opacity="0.5"/>
+  <rect x="133" y="12" width="1.5" height="106" rx="1" fill="#cc5500" opacity="0.5"/>
 
   <!-- PHOENIXVILLE -->
-  <text x="146" y="79"
+  <text x="147" y="79"
     font-family="Impact, 'Arial Black', sans-serif"
     font-size="52" font-weight="900" letter-spacing="2"
     fill="url(#heat)">PHOENIXVILLE</text>
 
   <!-- EVENTS -->
-  <text x="148" y="105"
+  <text x="149" y="105"
     font-family="'Trebuchet MS', Arial, sans-serif"
     font-size="13" letter-spacing="10"
     fill="#bdb6ab">EVENTS</text>
