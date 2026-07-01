@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <linearGradient id="f" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%"   stop-color="#ffe082"/>
-      <stop offset="28%"  stop-color="#ffd166"/>
-      <stop offset="65%"  stop-color="#ff8a3d"/>
-      <stop offset="100%" stop-color="#ff4d1c"/>
-    </linearGradient>
+    <radialGradient id="bg" cx="45%" cy="38%" r="56%">
+      <stop offset="0%"   stop-color="#ff8c00"/>
+      <stop offset="55%"  stop-color="#d63200"/>
+      <stop offset="100%" stop-color="#8c1c00"/>
+    </radialGradient>
+    <radialGradient id="wg" cx="75%" cy="25%" r="65%">
+      <stop offset="0%"   stop-color="#ffcc00"/>
+      <stop offset="45%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#cc3300"/>
+    </radialGradient>
+    <radialGradient id="hg" cx="40%" cy="35%" r="58%">
+      <stop offset="0%"   stop-color="#ffcc44"/>
+      <stop offset="60%"  stop-color="#ff8c00"/>
+      <stop offset="100%" stop-color="#cc4400"/>
+    </radialGradient>
   </defs>
+
+  <!-- Dark rounded background -->
   <rect width="100" height="100" rx="20" fill="#14161b"/>
 
-  <!-- CREST -->
-  <path d="M42 20 C40 12 38 7 40 4 C43 8 43 15 42 20Z"  fill="#ffe082"/>
-  <path d="M50 17 C50 8 49 3 50 1 C51 3 50 8 50 17Z"    fill="#fff0b3"/>
-  <path d="M58 20 C60 12 62 7 60 4 C57 8 57 15 58 20Z"  fill="#ffe082"/>
+  <!-- Phoenix scaled to fill 100×100 box. Source viewBox 0 0 100 115, scale 0.833, centered -->
+  <g transform="translate(7, 1.5) scale(0.833)">
+    <!-- WING -->
+    <path d="M52 56 C60 44 74 30 82 22 C86 19 88 22 86 27 C80 36 68 48 58 62 C56 66 53 70 52 73Z"
+          fill="url(#wg)" stroke="#6b1800" stroke-width="1.5"/>
+    <path d="M82 22 C85 16 89 11 91 13 C89 18 85 24 83 27Z" fill="#ffcc00" stroke="#7a2200" stroke-width="1"/>
+    <path d="M76 17 C79 11 83  7 85  9 C83 14 79 20 77 23Z" fill="#ffd944" stroke="#7a2200" stroke-width="1"/>
+    <path d="M70 13 C73  7 77  4 79  6 C77 11 73 17 71 20Z" fill="#ffdd66" stroke="#7a2200" stroke-width="1"/>
+    <path d="M64 10 C67  4 71  1 73  4 C71  9 67 14 65 18Z" fill="#ffe080" stroke="#7a2200" stroke-width="1"/>
 
-  <!-- HEAD -->
-  <ellipse cx="50" cy="27" rx="10" ry="9" fill="#ffd166"/>
+    <!-- BODY -->
+    <ellipse cx="40" cy="72" rx="21" ry="24" fill="url(#bg)" stroke="#6b1800" stroke-width="1.8"/>
+    <path d="M22 62 C29 56 38 55 52 60" stroke="#8c1c00" stroke-width="1.1" fill="none"/>
+    <path d="M20 69 C27 63 38 62 54 66" stroke="#8c1c00" stroke-width="1.1" fill="none"/>
+    <path d="M20 76 C27 70 38 69 55 73" stroke="#8c1c00" stroke-width="1.1" fill="none"/>
+    <path d="M21 83 C28 77 40 76 56 80" stroke="#8c1c00" stroke-width="1.1" fill="none"/>
+    <path d="M24 89 C31 83 42 82 57 85" stroke="#8c1c00" stroke-width="1.1" fill="none"/>
 
-  <!-- EYE -->
-  <circle cx="55" cy="25" r="2.2" fill="#1a0e00"/>
-  <circle cx="56" cy="24" r=".8"  fill="#fff8e0" opacity="0.7"/>
+    <!-- NECK -->
+    <path d="M48 50 C54 42 60 34 64 28 C60 26 54 30 50 38 C47 42 47 47 48 50Z"
+          fill="url(#hg)" stroke="#6b1800" stroke-width="1.2"/>
 
-  <!-- BEAK -->
-  <path d="M58 25 C63 24 66 26 65 30 C63 32 59 31 57 28 C56 26 57 25 58 25Z" fill="#ff8a3d"/>
-  <path d="M58 28 C62 28 64 30 62 33 C59 33 57 31 57 28Z" fill="#ff6a2c"/>
+    <!-- HEAD -->
+    <ellipse cx="64" cy="28" rx="13" ry="11" fill="url(#hg)" stroke="#6b1800" stroke-width="1.8"/>
 
-  <!-- BODY -->
-  <ellipse cx="50" cy="55" rx="12" ry="12" fill="url(#f)"/>
+    <!-- CREST -->
+    <path d="M58 18 C54 10 51  5 53  2 C57  6 59 12 60 19Z" fill="#ffe066" stroke="#cc6600" stroke-width="1"/>
+    <path d="M63 16 C61  8 59  3 62  1 C65  5 66 11 66 17Z" fill="#ffee88" stroke="#cc6600" stroke-width="1"/>
+    <path d="M68 17 C68  9 67  4 70  3 C72  7 72 13 71 18Z" fill="#ffe066" stroke="#cc6600" stroke-width="1"/>
 
-  <!-- LEFT WING -->
-  <path d="M39 48 C28 40 14 31 5 27 C2 25 1 28 3 31 C11 36 23 44 34 54 C36 57 38 61 39 65Z" fill="url(#f)"/>
+    <!-- EYE -->
+    <circle cx="60" cy="25" r="5"   fill="#ffcc00" stroke="#6b1800" stroke-width="1.4"/>
+    <circle cx="60" cy="25" r="2.5" fill="#1a0800"/>
+    <circle cx="61" cy="24" r=".9"  fill="white" opacity="0.75"/>
 
-  <!-- RIGHT WING -->
-  <path d="M61 48 C72 40 86 31 95 27 C98 25 99 28 97 31 C89 36 77 44 66 54 C64 57 62 61 61 65Z" fill="url(#f)"/>
+    <!-- BEAK -->
+    <path d="M73 23 C79 18 86 13 91 15 C90 19 85 23 79 25 C76 26 73 25 73 23Z"
+          fill="#cc5500" stroke="#6b1800" stroke-width="1.2"/>
+    <path d="M73 26 C78 26 84 27 87 31 C83 32 77 30 73 28 C72 27 72 26 73 26Z"
+          fill="#cc5500" stroke="#6b1800" stroke-width="1.2"/>
 
-  <!-- TAIL -->
-  <path d="M50 66 C50 75 50 85 50 93 C50 85 50 75 50 66Z"        fill="#ff8a3d"/>
-  <path d="M46 67 C42 77 41 88 44 97 C47 88 49 77 50 72Z"        fill="#ff6a2c"/>
-  <path d="M54 67 C58 77 59 88 56 97 C53 88 51 77 50 72Z"        fill="#ff6a2c"/>
-  <path d="M40 70 C35 81 33 93 37 101 C41 92 45 81 49 76Z"       fill="#ff5020"/>
-  <path d="M60 70 C65 81 67 93 63 101 C59 92 55 81 51 76Z"       fill="#ff5020"/>
+    <!-- TAIL -->
+    <path d="M34 88 C24 96 18 106 22 114 C27 105 32 96 38 91Z"  fill="#cc2800" stroke="#6b1800" stroke-width="1"/>
+    <path d="M29 90 C18 99 12 110 16 115 C22 107 28 97 34 93Z"  fill="#bb2200" stroke="#6b1800" stroke-width="1"/>
+    <path d="M39 86 C30 94 26 104 30 113 C35 104 39 94 44 89Z"  fill="#dd3300" stroke="#6b1800" stroke-width="1"/>
+    <path d="M44 87 C36 95 33 105 38 113 C43 105 46 95 49 90Z"  fill="#cc3300" stroke="#6b1800" stroke-width="1"/>
+    <path d="M49 88 C43 96 41 106 46 113 C50 105 52 96 53 90Z"  fill="#dd4400" stroke="#6b1800" stroke-width="1"/>
+    <path d="M54 88 C50 96 49 106 54 112 C57 105 58 96 57 90Z"  fill="#ee5500" stroke="#6b1800" stroke-width="1"/>
+  </g>
 </svg>
