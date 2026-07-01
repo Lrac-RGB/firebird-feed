@@ -1,75 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <defs>
-    <radialGradient id="bg" cx="50%" cy="42%" r="55%">
-      <stop offset="0%"   stop-color="#ff8c00"/>
-      <stop offset="55%"  stop-color="#d63200"/>
-      <stop offset="100%" stop-color="#8c1c00"/>
-    </radialGradient>
-    <radialGradient id="wgL" cx="22%" cy="28%" r="72%">
-      <stop offset="0%"   stop-color="#ffcc00"/>
-      <stop offset="40%"  stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#cc2800"/>
-    </radialGradient>
-    <radialGradient id="wgR" cx="78%" cy="28%" r="72%">
-      <stop offset="0%"   stop-color="#ffcc00"/>
-      <stop offset="40%"  stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#cc2800"/>
-    </radialGradient>
-    <radialGradient id="hg" cx="50%" cy="38%" r="58%">
-      <stop offset="0%"   stop-color="#ffcc44"/>
-      <stop offset="60%"  stop-color="#ff8c00"/>
-      <stop offset="100%" stop-color="#cc4400"/>
-    </radialGradient>
+    <linearGradient id="lw" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#7a1800"/>
+      <stop offset="38%"  stop-color="#d63200"/>
+      <stop offset="70%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+    <linearGradient id="rw" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#7a1800"/>
+      <stop offset="38%"  stop-color="#d63200"/>
+      <stop offset="70%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ffcc00"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0%"   stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#ffee00"/>
+    </linearGradient>
   </defs>
 
-  <!-- Dark background -->
+  <!-- Dark rounded background -->
   <rect width="100" height="100" rx="20" fill="#14161b"/>
 
-  <!-- Phoenix scaled to fill ~96×96 within the 100×100 box -->
-  <!-- Source: 160×150. Scale: 96/160=0.6 → height=90. translate(2,5) scale(0.6) -->
-  <g transform="translate(2, 6) scale(0.6)">
-
-    <!-- TAIL -->
-    <path d="M 73 108 C 67 122 65 136 69 146 C 72 136 74 124 75 112 Z"  fill="#dd3300" stroke="#6b1800" stroke-width="1.2"/>
-    <path d="M 78 109 C 77 124 77 138 80 148 C 83 138 83 124 82 109 Z"  fill="#ee4400" stroke="#6b1800" stroke-width="1.2"/>
-    <path d="M 87 108 C 93 122 95 136 91 146 C 88 136 86 124 85 112 Z"  fill="#dd3300" stroke="#6b1800" stroke-width="1.2"/>
+  <!-- Wings: source 160×88, scaled to 94×51, centered: translate(3, 28) scale(0.590) -->
+  <g transform="translate(3, 28) scale(0.590)">
 
     <!-- LEFT WING -->
-    <path d="M 74 80 C 54 62 28 40 8 20 C 5 17 3 21 5 26 C 26 46 54 66 72 88 Z"
-          fill="url(#wgL)" stroke="#6b1800" stroke-width="1.6"/>
-    <path d="M 8 20 C 4 12 3 6 6 2 C 9 8 9 14 10 22 Z"    fill="#ffcc00" stroke="#7a2200" stroke-width="1.1"/>
-    <path d="M 16 14 C 13 6 14 0 17 -1 C 19 5 18 12 18 17 Z" fill="#ffd944" stroke="#7a2200" stroke-width="1.1"/>
-    <path d="M 24 10 C 23 2 24 -2 27 -2 C 28 4 27 10 26 14 Z" fill="#ffdd66" stroke="#7a2200" stroke-width="1.1"/>
+    <path d="M 78 76
+             C 60 62 38 44 14 18
+             C 10 14 8 18 10 22
+             C 32 46 58 64 76 82
+             Z"
+          fill="url(#lw)" stroke="#5a1200" stroke-width="1.6"/>
+
+    <!-- Left flame feathers -->
+    <path d="M 14 18 C 10  8  9  2 12 -2 C 15  4 14 12 15 20 Z" fill="#ffcc00" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 21 13 C 18  3 18 -2 21 -4 C 23  2 22 10 22 15 Z" fill="#ffd900" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 28 10 C 26  0 27 -4 30 -5 C 32  1 31  8 30 12 Z" fill="#ffdd55" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 35  8 C 34  0 35 -4 38 -4 C 39  2 38  8 37 10 Z" fill="#ffe577" stroke="#aa4400" stroke-width="1"/>
+
+    <!-- LEFT wisp -->
+    <path d="M 50 58 C 49 50 48 44 50 41 C 52 45 51 52 52 59 Z" fill="url(#flame)" opacity="0.8"/>
 
     <!-- RIGHT WING -->
-    <path d="M 86 80 C 106 62 132 40 152 20 C 155 17 157 21 155 26 C 134 46 106 66 88 88 Z"
-          fill="url(#wgR)" stroke="#6b1800" stroke-width="1.6"/>
-    <path d="M 152 20 C 156 12 157 6 154 2 C 151 8 151 14 150 22 Z" fill="#ffcc00" stroke="#7a2200" stroke-width="1.1"/>
-    <path d="M 144 14 C 147 6 146 0 143 -1 C 141 5 142 12 142 17 Z" fill="#ffd944" stroke="#7a2200" stroke-width="1.1"/>
-    <path d="M 136 10 C 137 2 136 -2 133 -2 C 132 4 133 10 134 14 Z" fill="#ffdd66" stroke="#7a2200" stroke-width="1.1"/>
+    <path d="M 82 76
+             C 100 62 122 44 146 18
+             C 150 14 152 18 150 22
+             C 128 46 102 64 84 82
+             Z"
+          fill="url(#rw)" stroke="#5a1200" stroke-width="1.6"/>
 
-    <!-- BODY -->
-    <ellipse cx="80" cy="88" rx="17" ry="21" fill="url(#bg)" stroke="#6b1800" stroke-width="1.8"/>
+    <!-- Right flame feathers -->
+    <path d="M 146 18 C 150  8 151  2 148 -2 C 145  4 146 12 145 20 Z" fill="#ffcc00" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 139 13 C 142  3 142 -2 139 -4 C 137  2 138 10 138 15 Z" fill="#ffd900" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 132 10 C 134  0 133 -4 130 -5 C 128  1 129  8 130 12 Z" fill="#ffdd55" stroke="#aa4400" stroke-width="1"/>
+    <path d="M 125  8 C 126  0 125 -4 122 -4 C 121  2 122  8 123 10 Z" fill="#ffe577" stroke="#aa4400" stroke-width="1"/>
 
-    <!-- HEAD -->
-    <ellipse cx="80" cy="55" rx="15" ry="13" fill="url(#hg)" stroke="#6b1800" stroke-width="1.9"/>
+    <!-- Right wisp -->
+    <path d="M 110 58 C 111 50 112 44 110 41 C 108 45 109 52 108 59 Z" fill="url(#flame)" opacity="0.8"/>
 
-    <!-- CREST -->
-    <path d="M 73 44 C 69 34 68 27 71 23 C 74 28 76 36 76 46 Z" fill="#ffe066" stroke="#cc6600" stroke-width="1"/>
-    <path d="M 80 42 C 80 31 79 24 82 21 C 84 24 83 31 82 43 Z" fill="#ffee88" stroke="#cc6600" stroke-width="1"/>
-    <path d="M 87 44 C 91 34 92 27 89 23 C 86 28 84 36 84 46 Z" fill="#ffe066" stroke="#cc6600" stroke-width="1"/>
-
-    <!-- EYES -->
-    <circle cx="73" cy="53" r="5.5" fill="#ffcc00" stroke="#6b1800" stroke-width="1.5"/>
-    <circle cx="73" cy="53" r="2.8" fill="#1a0800"/>
-    <circle cx="74" cy="52" r="1.1" fill="white" opacity="0.8"/>
-    <circle cx="87" cy="53" r="5.5" fill="#ffcc00" stroke="#6b1800" stroke-width="1.5"/>
-    <circle cx="87" cy="53" r="2.8" fill="#1a0800"/>
-    <circle cx="88" cy="52" r="1.1" fill="white" opacity="0.8"/>
-
-    <!-- BEAK -->
-    <path d="M 77 62 C 79 66 80 69 80 71 C 80 69 81 66 83 62 C 82 60 80 59 78 60 Z"
-          fill="#cc5500" stroke="#6b1800" stroke-width="1.2"/>
+    <!-- Central flame -->
+    <path d="M 80 72 C 77 62 77 54 80 48 C 83 54 83 62 80 72 Z" fill="#ff8800" stroke="#5a1200" stroke-width="1.1"/>
+    <path d="M 80 68 C 78 58 79 52 80 46 C 81 52 82 58 80 68 Z" fill="#ffcc00" opacity="0.65"/>
   </g>
 </svg>
