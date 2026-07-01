@@ -327,6 +327,7 @@ const SOURCES = {
   library:      {label:"Reads & Co. / Library",         color:"#f4c95d", url:"https://phoenixvillelibrary.org/"},
   festival:     {label:"Festivals & Street Fairs",      color:"#ff4d6d", url:"https://www.phoenixville.org/Calendar.aspx"},
   taproom:      {label:"Taprooms & Live Music",         color:"#c77dff", url:"https://phoenixville.online/10-breweries-in-phoenixville-area-and-1-distillery/"},
+  pxv_online:   {label:"Phoenixville.online",           color:"#00b8a9", url:"https://phoenixville.online/"},
   ticketmaster: {label:"Ticketmaster",                  color:"#026cdf", url:"https://www.ticketmaster.com/search?q=phoenixville+pa"}
 };
 
@@ -349,15 +350,29 @@ const RECURRING = [
   {cadence:"Fri eve & weekend afternoons", title:"Live Music & Music Bingo at Twelve78", src:"taproom",
    text:"Twelve78 packs the calendar with live bands (Friday evenings, Saturday & Sunday afternoons), Friday Music Bingo, food trucks, line dancing and more."},
   {cadence:"Weekends & First Fridays · ~6–9pm", title:"Live Music at The Boardroom", src:"taproom",
-   text:"The Boardroom Restaurant & Bottle Shop hosts acoustic singer-songwriters most weekends and on First Fridays, with Boardroom Spirits cocktails and a full food menu."}
+   text:"The Boardroom Restaurant & Bottle Shop hosts acoustic singer-songwriters most weekends and on First Fridays, with Boardroom Spirits cocktails and a full food menu."},
+  {cadence:"Fri 4–10pm · Sat & Sun 7am–10pm (May–Oct)", title:"PXV Inside Out — Open-Air Dining", src:"pxv_online",
+   text:"Bridge Street closes to traffic from Starr to Gay St all summer — al fresco dining at local restaurants, live music, craft beverages and boutique browsing. Open container permitted on designated blocks. Weather cancellations announced by 8:30am at phoenixville.org."}
 ];
 
 /* ---------- Dated upcoming events (real, sourced) ---------- */
 const EVENTS = [
   {date:"2026-07-01", end:"2026-07-12", time:"Daily", title:"Shorty's Short Film Contest", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
    blurb:"The Colonial's carnival-themed short-film showcase runs across nearly two weeks on the historic screens.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-07-03", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street, Downtown", src:"borough",
-   blurb:"July's First Friday — Bridge Street shops, galleries and eateries open late.", url:"https://www.phoenixville.org/Calendar.aspx"},
+  {date:"2026-07-03", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"July's First Friday — live musicians throughout downtown, handmade craft vendors on Bridge Street, shops and restaurants open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
+  {date:"2026-08-07", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"August First Friday — live musicians, street vendors, and late-night dining on Bridge Street.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
+  {date:"2026-09-04", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"September First Friday — outdoor celebration with live music, craft vendors, and open-air dining.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
+  {date:"2026-10-02", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"October First Friday — fall edition with live music, street vendors, and downtown shops open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
+  {date:"2026-10-04", time:"All day", title:"PXV Inside Out — Last Weekend", venue:"Bridge Street, Downtown", src:"pxv_online",
+   blurb:"Final weekend of the summer open-air dining season on Bridge Street before the street reopens to traffic.", url:"https://phoenixville.online/pxv-inside-out-open-air-dining-experience/"},
+  {date:"2026-11-06", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"November First Friday — downtown shops, galleries and restaurants open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
+  {date:"2026-12-04", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
+   blurb:"December First Friday — holiday edition with live music and late-night downtown shopping.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
   {date:"2026-07-11", time:"All day", title:"BlobFest Street Fair (Camp Blobfest)", venue:"Bridge St & The Colonial Theatre", src:"festival",
    blurb:"Phoenixville's beloved tribute to the 1958 film 'The Blob' — street fair, vendors and the famous run-out from the Colonial.", url:"https://thecolonialtheatre.com/events/"},
   {date:"2026-07-17", time:"7:00pm", title:"Emily McIntire · 'Forsaking Midnight'", venue:"The Colonial Theatre (w/ Reads & Company)", src:"library",
