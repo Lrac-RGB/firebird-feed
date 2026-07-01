@@ -325,7 +325,7 @@
       Phoenixville · Chester County, PA
     </p>
     <img src="logo.svg" alt="Phoenixville Pennsylvania" style="width:min(520px,90vw);height:auto;display:block;margin-bottom:.6rem">
-    <p class="lede">Borough meetings, First Fridays, the Colonial marquee, the Saturday market, live music on Bridge Street — pulled together from the town's civic and cultural sources so you never miss what's lighting up Phoenixville.</p>
+    <p class="lede">First Fridays, the Colonial marquee, the Saturday market, live music on Bridge Street, and every bar worth knowing — pulled together from the town's civic and cultural sources so you never miss what's lighting up Phoenixville.</p>
     <div class="molten"></div>
     <div class="stats">
       <div class="stat"><b id="stat-events">—</b><span>Listings &amp; venues</span></div>
@@ -420,6 +420,22 @@ const RECURRING = [
    text:"Twelve78 packs the calendar with live bands (Friday evenings, Saturday & Sunday afternoons), Friday Music Bingo, food trucks, line dancing and more."},
   {cadence:"Weekends & First Fridays · ~6–9pm", title:"Live Music at The Boardroom", src:"taproom",
    text:"The Boardroom Restaurant & Bottle Shop hosts acoustic singer-songwriters most weekends and on First Fridays, with Boardroom Spirits cocktails and a full food menu."},
+  {cadence:"Fridays · evening", title:"Cocktail Tastings & Live Music at Bluebird Distilling", src:"taproom",
+   text:"Bluebird Distilling on 100 Bridge St pours their award-winning craft spirits — vodka, whiskey, rum and seasonal cocktails — with live music and tastings most Friday evenings."},
+  {cadence:"Weekends", title:"Tap Room Events at The Rec Room", src:"taproom",
+   text:"Conshohocken Brewing's Rec Room at 230 Bridge St runs weekend events in the lively tap-room event space — live music, themed nights, and the full Conshohocken tap list."},
+  {cadence:"Tue & Thu · evening", title:"Trivia & Pub Nights at Molly Maguire's", src:"taproom",
+   text:"Molly Maguire's Irish Restaurant & Pub (197 Bridge St) hosts nightly specials, pub quiz nights, and live music on the rooftop deck overlooking downtown."},
+  {cadence:"Weekends · afternoon & evening", title:"Live Music at Root Down Brewing", src:"taproom",
+   text:"Root Down Brewing's big timber-beamed taproom at 1 N. Main St books local acts on weekends — craft beer, a full food menu, and room for the whole crew."},
+  {cadence:"Thursdays · evening", title:"Events at Rebel Hill Brewing", src:"taproom",
+   text:"Rebel Hill Brewing (242 Bridge St) runs a regular lineup of tap room events — trivia, themed nights, and live music — alongside their rotating craft beer menu and full kitchen."},
+  {cadence:"Weekends", title:"Patio Events at Sly Fox Brewhouse", src:"taproom",
+   text:"One of the region's pioneering craft breweries (est. 1995) runs weekend events and seasonal tap takeovers on their patio — classic Sly Fox brews and rotating specials."},
+  {cadence:"Fri & Sat · evening", title:"Live Music at Stable 12 Brewing", src:"taproom",
+   text:"Stable 12 hosts live local acts on Friday and Saturday evenings, with their full food menu, craft beers and an easy-going taproom vibe."},
+  {cadence:"Weekends", title:"Events at Crowded Castle Brewing", src:"taproom",
+   text:"Crowded Castle Brewing Co. (240 Bridge St) pours their IPA-forward lineup on weekends and hosts rotating events — BYO food welcome, great craft beer always on tap."},
   {cadence:"Fri 4–10pm · Sat & Sun 7am–10pm (May–Oct)", title:"PXV Inside Out — Open-Air Dining", src:"pxv_online",
    text:"Bridge Street closes to traffic from Starr to Gay St all summer — al fresco dining at local restaurants, live music, craft beverages and boutique browsing. Open container permitted on designated blocks. Weather cancellations announced by 8:30am at phoenixville.org."}
 ];
@@ -513,7 +529,7 @@ const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","De
 const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 let activeSrc="all", query="";
 
-const allDated=[...EVENTS, ...CIVIC];
+const allDated=[...EVENTS];
 
 /* chips */
 const chipWrap=document.getElementById("chips");

@@ -1,91 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 130" role="img" aria-label="Phoenixville Pennsylvania">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 555 130" role="img" aria-label="Phoenixville Pennsylvania">
   <defs>
-    <radialGradient id="bg" cx="45%" cy="38%" r="56%">
+    <radialGradient id="bg" cx="50%" cy="42%" r="55%">
       <stop offset="0%"   stop-color="#ff8c00"/>
       <stop offset="55%"  stop-color="#d63200"/>
       <stop offset="100%" stop-color="#8c1c00"/>
     </radialGradient>
-    <radialGradient id="wg" cx="75%" cy="25%" r="65%">
+    <radialGradient id="wgL" cx="22%" cy="28%" r="72%">
       <stop offset="0%"   stop-color="#ffcc00"/>
-      <stop offset="45%"  stop-color="#ff7700"/>
-      <stop offset="100%" stop-color="#cc3300"/>
+      <stop offset="40%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#cc2800"/>
     </radialGradient>
-    <radialGradient id="hg" cx="40%" cy="35%" r="58%">
+    <radialGradient id="wgR" cx="78%" cy="28%" r="72%">
+      <stop offset="0%"   stop-color="#ffcc00"/>
+      <stop offset="40%"  stop-color="#ff7700"/>
+      <stop offset="100%" stop-color="#cc2800"/>
+    </radialGradient>
+    <radialGradient id="hg" cx="50%" cy="38%" r="58%">
       <stop offset="0%"   stop-color="#ffcc44"/>
       <stop offset="60%"  stop-color="#ff8c00"/>
       <stop offset="100%" stop-color="#cc4400"/>
     </radialGradient>
-    <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="138" y1="30" x2="515" y2="108">
+    <linearGradient id="heat" gradientUnits="userSpaceOnUse" x1="148" y1="30" x2="550" y2="108">
       <stop offset="0%"   stop-color="#cc3200"/>
       <stop offset="45%"  stop-color="#d63200"/>
-      <stop offset="100%"  stop-color="#ff8c00"/>
+      <stop offset="100%" stop-color="#ff8c00"/>
     </linearGradient>
   </defs>
 
-  <!-- Phoenix: 100×115 source scaled 1.09× to fill 125px, offset (4,2) -->
-  <g transform="translate(4, 2) scale(1.09)">
-    <!-- WING -->
-    <path d="M52 56 C60 44 74 30 82 22 C86 19 88 22 86 27 C80 36 68 48 58 62 C56 66 53 70 52 73Z"
-          fill="url(#wg)" stroke="#6b1800" stroke-width="1.2"/>
-    <path d="M82 22 C85 16 89 11 91 13 C89 18 85 24 83 27Z" fill="#ffcc00" stroke="#7a2200" stroke-width=".8"/>
-    <path d="M76 17 C79 11 83  7 85  9 C83 14 79 20 77 23Z" fill="#ffd944" stroke="#7a2200" stroke-width=".8"/>
-    <path d="M70 13 C73  7 77  4 79  6 C77 11 73 17 71 20Z" fill="#ffdd66" stroke="#7a2200" stroke-width=".8"/>
-    <path d="M64 10 C67  4 71  1 73  4 C71  9 67 14 65 18Z" fill="#ffe080" stroke="#7a2200" stroke-width=".8"/>
-    <path d="M58 62 C66 52 74 40 80 30" stroke="#aa3300" stroke-width=".7" fill="none"/>
-    <path d="M56 66 C64 55 72 44 78 34" stroke="#aa3300" stroke-width=".7" fill="none"/>
+  <!-- Phoenix: source 160×150, scaled to 130px height via scale(0.853), translate(1,2) -->
+  <g transform="translate(1, 2) scale(0.853)">
+
+    <!-- TAIL feathers (behind everything) -->
+    <path d="M 68 106 C 58 118 54 130 58 142 C 62 130 66 120 70 110 Z"  fill="#cc2800" stroke="#6b1800" stroke-width=".9"/>
+    <path d="M 73 108 C 67 122 65 136 69 146 C 72 136 74 124 75 112 Z"  fill="#dd3300" stroke="#6b1800" stroke-width=".9"/>
+    <path d="M 78 109 C 77 124 77 138 80 148 C 83 138 83 124 82 109 Z"  fill="#ee4400" stroke="#6b1800" stroke-width=".9"/>
+    <path d="M 87 108 C 93 122 95 136 91 146 C 88 136 86 124 85 112 Z"  fill="#dd3300" stroke="#6b1800" stroke-width=".9"/>
+    <path d="M 92 106 C 102 118 106 130 102 142 C 98 130 94 120 90 110 Z" fill="#cc2800" stroke="#6b1800" stroke-width=".9"/>
+
+    <!-- LEFT WING -->
+    <path d="M 74 80 C 54 62 28 40 8 20 C 5 17 3 21 5 26 C 26 46 54 66 72 88 Z"
+          fill="url(#wgL)" stroke="#6b1800" stroke-width="1.4"/>
+    <path d="M 72 88 C 52 70 28 50 8 30" stroke="#aa3300" stroke-width=".8" fill="none"/>
+    <path d="M 73 84 C 54 66 32 46 14 28" stroke="#cc4400" stroke-width=".6" fill="none" opacity="0.6"/>
+    <path d="M 8 20 C 4 12 3 6 6 2 C 9 8 9 14 10 22 Z"    fill="#ffcc00" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 15 15 C 12 7 12 1 15 -1 C 18 5 17 11 17 18 Z" fill="#ffd944" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 22 11 C 21 3 22 -2 25 -2 C 27 4 25 10 24 15 Z" fill="#ffdd66" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 29 9  C 30 2 31 -2 34 -1 C 35 5 33 11 31 15 Z" fill="#ffe080" stroke="#7a2200" stroke-width=".9"/>
+
+    <!-- RIGHT WING -->
+    <path d="M 86 80 C 106 62 132 40 152 20 C 155 17 157 21 155 26 C 134 46 106 66 88 88 Z"
+          fill="url(#wgR)" stroke="#6b1800" stroke-width="1.4"/>
+    <path d="M 88 88 C 108 70 132 50 152 30" stroke="#aa3300" stroke-width=".8" fill="none"/>
+    <path d="M 87 84 C 106 66 128 46 146 28" stroke="#cc4400" stroke-width=".6" fill="none" opacity="0.6"/>
+    <path d="M 152 20 C 156 12 157 6 154 2 C 151 8 151 14 150 22 Z" fill="#ffcc00" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 145 15 C 148 7 148 1 145 -1 C 142 5 143 11 143 18 Z" fill="#ffd944" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 138 11 C 139 3 138 -2 135 -2 C 133 4 135 10 136 15 Z" fill="#ffdd66" stroke="#7a2200" stroke-width=".9"/>
+    <path d="M 131 9  C 130 2 129 -2 126 -1 C 125 5 127 11 129 15 Z" fill="#ffe080" stroke="#7a2200" stroke-width=".9"/>
 
     <!-- BODY -->
-    <ellipse cx="40" cy="72" rx="21" ry="24" fill="url(#bg)" stroke="#6b1800" stroke-width="1.5"/>
-    <path d="M22 62 C29 56 38 55 52 60" stroke="#8c1c00" stroke-width=".9" fill="none"/>
-    <path d="M20 69 C27 63 38 62 54 66" stroke="#8c1c00" stroke-width=".9" fill="none"/>
-    <path d="M20 76 C27 70 38 69 55 73" stroke="#8c1c00" stroke-width=".9" fill="none"/>
-    <path d="M21 83 C28 77 40 76 56 80" stroke="#8c1c00" stroke-width=".9" fill="none"/>
-    <path d="M24 89 C31 83 42 82 57 85" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <ellipse cx="80" cy="88" rx="17" ry="21" fill="url(#bg)" stroke="#6b1800" stroke-width="1.6"/>
+    <path d="M 65 78 C 72 74 80 73 95 77" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 64 85 C 71 81 80 80 96 84" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 64 92 C 71 88 80 87 96 91" stroke="#8c1c00" stroke-width=".9" fill="none"/>
+    <path d="M 65 99 C 72 95 80 94 95 98" stroke="#8c1c00" stroke-width=".9" fill="none"/>
 
     <!-- NECK -->
-    <path d="M48 50 C54 42 60 34 64 28 C60 26 54 30 50 38 C47 42 47 47 48 50Z"
+    <path d="M 75 70 C 76 65 78 62 80 60 C 82 62 84 65 85 70 C 82 68 80 67 78 68 Z"
           fill="url(#hg)" stroke="#6b1800" stroke-width="1"/>
 
     <!-- HEAD -->
-    <ellipse cx="64" cy="28" rx="13" ry="11" fill="url(#hg)" stroke="#6b1800" stroke-width="1.5"/>
+    <ellipse cx="80" cy="55" rx="15" ry="13" fill="url(#hg)" stroke="#6b1800" stroke-width="1.7"/>
 
     <!-- CREST -->
-    <path d="M58 18 C54 10 51  5 53  2 C57  6 59 12 60 19Z" fill="#ffe066" stroke="#cc6600" stroke-width=".8"/>
-    <path d="M63 16 C61  8 59  3 62  1 C65  5 66 11 66 17Z" fill="#ffee88" stroke="#cc6600" stroke-width=".8"/>
-    <path d="M68 17 C68  9 67  4 70  3 C72  7 72 13 71 18Z" fill="#ffe066" stroke="#cc6600" stroke-width=".8"/>
+    <path d="M 73 44 C 69 34 68 27 71 23 C 74 28 76 36 76 46 Z" fill="#ffe066" stroke="#cc6600" stroke-width=".9"/>
+    <path d="M 80 42 C 80 31 79 24 82 21 C 84 24 83 31 82 43 Z" fill="#ffee88" stroke="#cc6600" stroke-width=".9"/>
+    <path d="M 87 44 C 91 34 92 27 89 23 C 86 28 84 36 84 46 Z" fill="#ffe066" stroke="#cc6600" stroke-width=".9"/>
 
-    <!-- EYE -->
-    <circle cx="60" cy="25" r="5"   fill="#ffcc00" stroke="#6b1800" stroke-width="1.2"/>
-    <circle cx="60" cy="25" r="2.5" fill="#1a0800"/>
-    <circle cx="61" cy="24" r=".9"  fill="white" opacity="0.75"/>
+    <!-- EYES -->
+    <circle cx="73" cy="53" r="5.2" fill="#ffcc00" stroke="#6b1800" stroke-width="1.3"/>
+    <circle cx="73" cy="53" r="2.6" fill="#1a0800"/>
+    <circle cx="74" cy="52" r="1"   fill="white" opacity="0.8"/>
+    <circle cx="87" cy="53" r="5.2" fill="#ffcc00" stroke="#6b1800" stroke-width="1.3"/>
+    <circle cx="87" cy="53" r="2.6" fill="#1a0800"/>
+    <circle cx="88" cy="52" r="1"   fill="white" opacity="0.8"/>
 
-    <!-- BEAK (open, pointing up-right) -->
-    <path d="M73 23 C79 18 86 13 91 15 C90 19 85 23 79 25 C76 26 73 25 73 23Z"
-          fill="#cc5500" stroke="#6b1800" stroke-width="1"/>
-    <path d="M73 26 C78 26 84 27 87 31 C83 32 77 30 73 28 C72 27 72 26 73 26Z"
-          fill="#cc5500" stroke="#6b1800" stroke-width="1"/>
+    <!-- BEAK -->
+    <path d="M 77 62 C 79 66 80 69 80 71 C 80 69 81 66 83 62 C 82 60 80 59 78 60 Z"
+          fill="#cc5500" stroke="#6b1800" stroke-width="1.1"/>
+    <path d="M 78 70 C 79 73 81 72 80 70 Z" fill="#3a0c00"/>
 
-    <!-- TAIL -->
-    <path d="M34 88 C24 96 18 106 22 114 C27 105 32 96 38 91Z"  fill="#cc2800" stroke="#6b1800" stroke-width=".8"/>
-    <path d="M29 90 C18 99 12 110 16 115 C22 107 28 97 34 93Z"  fill="#bb2200" stroke="#6b1800" stroke-width=".8"/>
-    <path d="M39 86 C30 94 26 104 30 113 C35 104 39 94 44 89Z"  fill="#dd3300" stroke="#6b1800" stroke-width=".8"/>
-    <path d="M44 87 C36 95 33 105 38 113 C43 105 46 95 49 90Z"  fill="#cc3300" stroke="#6b1800" stroke-width=".8"/>
-    <path d="M49 88 C43 96 41 106 46 113 C50 105 52 96 53 90Z"  fill="#dd4400" stroke="#6b1800" stroke-width=".8"/>
-    <path d="M54 88 C50 96 49 106 54 112 C57 105 58 96 57 90Z"  fill="#ee5500" stroke="#6b1800" stroke-width=".8"/>
+    <!-- TALONS -->
+    <ellipse cx="73" cy="109" rx="4" ry="3" fill="#cc5500" stroke="#6b1800" stroke-width="1"/>
+    <path d="M 73 108 Q 69 118 64 126 Q 61 131 60 136" stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M 73 108 Q 70 120 70 130 Q 70 135 72 138" stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M 73 108 Q 75 120 77 128 Q 78 132 76 136"  stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+    <ellipse cx="87" cy="109" rx="4" ry="3" fill="#cc5500" stroke="#6b1800" stroke-width="1"/>
+    <path d="M 87 108 Q 91 118 96 126 Q 99 131 100 136" stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M 87 108 Q 90 120 90 130 Q 90 135 88 138" stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <path d="M 87 108 Q 85 120 83 128 Q 82 132 84 136"  stroke="#cc5500" stroke-width="3.5" fill="none" stroke-linecap="round"/>
   </g>
 
   <!-- Divider -->
-  <rect x="126" y="14" width="1.5" height="102" rx="1" fill="#cc5500" opacity="0.5"/>
+  <rect x="142" y="12" width="1.5" height="106" rx="1" fill="#cc5500" opacity="0.5"/>
 
   <!-- PHOENIXVILLE -->
-  <text x="142" y="80"
+  <text x="153" y="79"
     font-family="Impact, 'Arial Black', sans-serif"
-    font-size="54" font-weight="900" letter-spacing="3"
+    font-size="52" font-weight="900" letter-spacing="2"
     fill="url(#heat)">PHOENIXVILLE</text>
 
   <!-- PENNSYLVANIA -->
-  <text x="144" y="106"
+  <text x="155" y="105"
     font-family="'Trebuchet MS', Arial, sans-serif"
     font-size="13" letter-spacing="8"
     fill="#bdb6ab">PENNSYLVANIA</text>
