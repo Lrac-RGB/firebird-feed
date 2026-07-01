@@ -3,39 +3,42 @@
   <defs>
     <linearGradient id="f" x1="0.5" y1="0" x2="0.5" y2="1">
       <stop offset="0%"   stop-color="#ffe082"/>
-      <stop offset="30%"  stop-color="#ffd166"/>
+      <stop offset="28%"  stop-color="#ffd166"/>
       <stop offset="65%"  stop-color="#ff8a3d"/>
       <stop offset="100%" stop-color="#ff4d1c"/>
     </linearGradient>
   </defs>
-
-  <!-- Background -->
   <rect width="100" height="100" rx="20" fill="#14161b"/>
 
   <!-- CREST -->
-  <path d="M50 18 C49 11 46  6 48  3 C50  6 50 13 50 18Z" fill="#ffe082"/>
-  <path d="M50 18 C50  9 49  4 50  1 C51  4 50  9 50 18Z" fill="#fff0b3"/>
-  <path d="M50 18 C51 11 54  6 52  3 C50  6 50 13 50 18Z" fill="#ffe082"/>
+  <path d="M42 20 C40 12 38 7 40 4 C43 8 43 15 42 20Z"  fill="#ffe082"/>
+  <path d="M50 17 C50 8 49 3 50 1 C51 3 50 8 50 17Z"    fill="#fff0b3"/>
+  <path d="M58 20 C60 12 62 7 60 4 C57 8 57 15 58 20Z"  fill="#ffe082"/>
 
   <!-- HEAD -->
-  <ellipse cx="50" cy="24" rx="9" ry="8" fill="#ffd166"/>
+  <ellipse cx="50" cy="27" rx="10" ry="9" fill="#ffd166"/>
+
+  <!-- EYE -->
+  <circle cx="55" cy="25" r="2.2" fill="#1a0e00"/>
+  <circle cx="56" cy="24" r=".8"  fill="#fff8e0" opacity="0.7"/>
 
   <!-- BEAK -->
-  <path d="M47 31 L50 36 L53 31Z" fill="#ffb347"/>
+  <path d="M58 25 C63 24 66 26 65 30 C63 32 59 31 57 28 C56 26 57 25 58 25Z" fill="#ff8a3d"/>
+  <path d="M58 28 C62 28 64 30 62 33 C59 33 57 31 57 28Z" fill="#ff6a2c"/>
 
   <!-- BODY -->
-  <ellipse cx="50" cy="55" rx="11" ry="13" fill="url(#f)"/>
+  <ellipse cx="50" cy="55" rx="12" ry="12" fill="url(#f)"/>
 
   <!-- LEFT WING -->
-  <path d="M40 48 C30 40 16 30 6 27 C3 26 3 29 5 31 C13 36 25 43 35 52 C37 55 39 59 40 62Z" fill="url(#f)"/>
+  <path d="M39 48 C28 40 14 31 5 27 C2 25 1 28 3 31 C11 36 23 44 34 54 C36 57 38 61 39 65Z" fill="url(#f)"/>
 
   <!-- RIGHT WING -->
-  <path d="M60 48 C70 40 84 30 94 27 C97 26 97 29 95 31 C87 36 75 43 65 52 C63 55 61 59 60 62Z" fill="url(#f)"/>
+  <path d="M61 48 C72 40 86 31 95 27 C98 25 99 28 97 31 C89 36 77 44 66 54 C64 57 62 61 61 65Z" fill="url(#f)"/>
 
   <!-- TAIL -->
-  <path d="M50 67 C50 75 50 84 50 92 C50 84 50 75 50 67Z"      fill="#ff8a3d"/>
-  <path d="M45 69 C41 77 40 86 43 94 C46 86 48 77 50 73Z"      fill="#ff6a2c"/>
-  <path d="M55 69 C59 77 60 86 57 94 C54 86 52 77 50 73Z"      fill="#ff6a2c"/>
-  <path d="M39 71 C34 80 32 90 36 98 C41 89 45 80 48 76Z"      fill="#ff5020"/>
-  <path d="M61 71 C66 80 68 90 64 98 C59 89 55 80 52 76Z"      fill="#ff5020"/>
+  <path d="M50 66 C50 75 50 85 50 93 C50 85 50 75 50 66Z"        fill="#ff8a3d"/>
+  <path d="M46 67 C42 77 41 88 44 97 C47 88 49 77 50 72Z"        fill="#ff6a2c"/>
+  <path d="M54 67 C58 77 59 88 56 97 C53 88 51 77 50 72Z"        fill="#ff6a2c"/>
+  <path d="M40 70 C35 81 33 93 37 101 C41 92 45 81 49 76Z"       fill="#ff5020"/>
+  <path d="M60 70 C65 81 67 93 63 101 C59 92 55 81 51 76Z"       fill="#ff5020"/>
 </svg>
