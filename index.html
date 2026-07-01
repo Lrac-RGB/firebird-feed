@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Firebird Feed — Phoenixville, PA Events</title>
+<title>Phoenixville - What's Happening</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -260,7 +260,7 @@
       </svg>
       Phoenixville · Chester County, PA
     </p>
-    <h1 class="wordmark">The Firebird<br>Feed<span class="sub">EVERY EVENT IN TOWN · ONE PLACE</span></h1>
+    <h1 class="wordmark">Phoenixville - What's Happening<span class="sub">EVERY EVENT IN TOWN · ONE PLACE</span></h1>
     <p class="lede">Borough meetings, First Fridays, the Colonial marquee, the Saturday market, live music on Bridge Street — pulled together from the town's civic and cultural sources so you never miss what's lighting up Phoenixville.</p>
     <div class="molten"></div>
     <div class="stats">
@@ -302,7 +302,7 @@
   <div class="foot-inner">
     <div class="foot">
       <h4>How this feed is built</h4>
-      <p>The Firebird Feed gathers what's posted on Phoenixville's official borough calendar and the town's main venues and organizers, then lays it out in one chronological view you can filter by source. Listings reflect what those sources have published; always tap through to confirm dates, times and tickets before you head out.</p>
+      <p>Phoenixville Feed gathers what's posted on Phoenixville's official borough calendar and the town's main venues and organizers, then lays it out in one chronological view you can filter by source. Listings reflect what those sources have published; always tap through to confirm dates, times and tickets before you head out.</p>
       <p>Got something to add? The borough takes public submissions through the <a href="https://www.phoenixville.org/Calendar.aspx" style="color:var(--spark)">Submit Event</a> form on its calendar, and most venues list their own shows directly.</p>
       <p class="fineprint">Compiled from publicly posted listings · Times and dates subject to change by the organizer · Not affiliated with the Borough of Phoenixville.</p>
     </div>
@@ -336,7 +336,15 @@ const RECURRING = [
   {cadence:"Thursdays · evening", title:"Live Music at Steel City", src:"steel",
    text:"The Bridge Street coffeehouse & brewery runs an original-music lineup, with the kitchen and taps open late on show nights."},
   {cadence:"Weekly · open mic", title:"Open Mic & Listening Room", src:"steel",
-   text:"Steel City's award-winning listening room hosts open-mic nights for songwriters and players — sign up, plug in, and take the room."}
+   text:"Steel City's award-winning listening room hosts open-mic nights for songwriters and players — sign up, plug in, and take the room."},
+  {cadence:"Thu & Sat · ~9:30pm", title:"Live Music at Bistro on Bridge", src:"taproom",
+   text:"Bands take the upstairs Analog Bar Room most Thursday and Saturday nights — 30+ taps below, beer garden overlooking downtown, and room to dance."},
+  {cadence:"Tuesdays · evening", title:"Trivia Night at Twelve78", src:"taproom",
+   text:"The family-owned brewery behind 35 Bridge St runs its weekly trivia night — pet-friendly, easy parking in Lot #7, fresh craft beer all night."},
+  {cadence:"Fri eve & weekend afternoons", title:"Live Music & Music Bingo at Twelve78", src:"taproom",
+   text:"Twelve78 packs the calendar with live bands (Friday evenings, Saturday & Sunday afternoons), Friday Music Bingo, food trucks, line dancing and more."},
+  {cadence:"Weekends & First Fridays · ~6–9pm", title:"Live Music at The Boardroom", src:"taproom",
+   text:"The Boardroom Restaurant & Bottle Shop hosts acoustic singer-songwriters most weekends and on First Fridays, with Boardroom Spirits cocktails and a full food menu."}
 ];
 
 /* ---------- Dated upcoming events (real, sourced) ---------- */
@@ -360,7 +368,9 @@ const EVENTS = [
   {date:"2026-09-05", time:"All day", title:"Phoenixville Blues Festival", venue:"Downtown Phoenixville", src:"festival",
    blurb:"Annual blues festival bringing live acts to the heart of town.", url:"https://www.phoenixville.org/Calendar.aspx"},
   {date:"2026-10-07", time:"7:30pm", title:"The Buena Vista Orchestra", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
-   blurb:"Cuban-rooted big-band sound on the Colonial's main stage.", url:"https://thecolonialtheatre.com/events/"}
+   blurb:"Cuban-rooted big-band sound on the Colonial's main stage.", url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-11-19", time:"6:00–9:00pm", title:"Jill Baldassari (Live)", venue:"The Boardroom, 101 Bridge St", src:"taproom",
+   blurb:"An evening of live acoustic music at The Boardroom Restaurant & Bottle Shop.", url:"https://www.theboardroompxv.com/"}
 ];
 
 /* ---------- Civic note (recurring borough meetings) ---------- */
@@ -393,9 +403,12 @@ const VENUES = [
   {name:"Crowded Castle Brewing Co.", kind:"IPAs, ales & stouts · BYO food", addr:"240–242 Bridge St", src:"taproom", url:"https://crowdedcastle.com/"},
   {name:"Stable 12 Brewing Company", kind:"Craft brewery · full food menu", addr:"Phoenixville", src:"taproom", url:"https://www.stable12.com/"},
   {name:"Iron Hill Brewery & Restaurant", kind:"20+ years of craft beer & handcrafted food", addr:"130 Bridge St", src:"taproom", url:"https://www.ironhillbrewery.com/"},
-  {name:"Bluebird Distilling", kind:"Phoenixville's craft distillery & cocktail bar", addr:"Bridge St", src:"taproom", url:"https://www.bluebirddistilling.com/"},
-  {name:"Molly Maguire's Irish Pub", kind:"Food, drinks & nightlife · live music", addr:"Bridge St", src:"taproom", url:null},
-  {name:"Bistro on Bridge", kind:"30+ taps downstairs · live music upstairs", addr:"Bridge St", src:"taproom", url:null}
+  {name:"The Boardroom Restaurant & Bottle Shop", kind:"Restaurant · bottle shop · Boardroom Spirits cocktails · live music", addr:"101 Bridge St", src:"taproom", url:"https://www.theboardroompxv.com/"},
+  {name:"Twelve78 Brewing Co.", kind:"Family-owned brewery · live music · trivia · food trucks", addr:"Behind 35 Bridge St", src:"taproom", url:"https://www.twelve78brewing.com/event-calendar/"},
+  {name:"Bluebird Distilling", kind:"Craft distillery & cocktail bar · events & tastings", addr:"100 Bridge St", src:"taproom", url:"https://www.bluebirddistilling.com/"},
+  {name:"Molly Maguire's Irish Restaurant & Pub", kind:"Irish pub · rooftop deck · nightly specials", addr:"197 Bridge St", src:"taproom", url:"https://mollymaguiresphoenixville.com/"},
+  {name:"The Rec Room", kind:"Conshohocken Brewing taproom · food · event space", addr:"230 Bridge St", src:"taproom", url:"https://conshohockenbrewing.com/recroommain"},
+  {name:"Bistro on Bridge", kind:"30+ taps · beer garden · live music upstairs (Thu & Sat)", addr:"212 Bridge St", src:"taproom", url:"https://bistroonbridge.com/"}
 ];
 
 /* ---------- Signature annual festivals ---------- */
