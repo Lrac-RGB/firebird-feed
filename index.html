@@ -278,6 +278,7 @@
       <input id="search" type="search" placeholder="Search events, venues, music…" aria-label="Search events">
     </label>
     <div class="chips" id="chips"></div>
+    <span id="live-status" style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ink-50);white-space:nowrap"></span>
   </div>
 </nav>
 
@@ -315,14 +316,18 @@
 
 <script>
 /* ---------- Source definitions ---------- */
+/* Get a free key at https://developer.ticketmaster.com/ */
+const TM_KEY = '';
+
 const SOURCES = {
-  borough:  {label:"Borough of Phoenixville", color:"#4f95c0", url:"https://www.phoenixville.org/Calendar.aspx"},
-  colonial: {label:"The Colonial Theatre",    color:"#ff6a2c", url:"https://thecolonialtheatre.com/events/"},
-  market:   {label:"Phoenixville Farmers' Market", color:"#7bbf6a", url:"https://www.phoenixvillefarmersmarket.org/"},
-  steel:    {label:"Steel City Coffeehouse",  color:"#ff7eb6", url:"https://www.steelcityphx.com/concerts-and-events"},
-  library:  {label:"Reads & Co. / Library",   color:"#f4c95d", url:"https://phoenixvillelibrary.org/"},
-  festival: {label:"Festivals & Street Fairs",color:"#ff4d6d", url:"https://www.phoenixville.org/Calendar.aspx"},
-  taproom:  {label:"Taprooms & Live Music",   color:"#c77dff", url:"https://phoenixville.online/10-breweries-in-phoenixville-area-and-1-distillery/"}
+  borough:      {label:"Borough of Phoenixville",      color:"#4f95c0", url:"https://www.phoenixville.org/Calendar.aspx"},
+  colonial:     {label:"The Colonial Theatre",          color:"#ff6a2c", url:"https://thecolonialtheatre.com/events/"},
+  market:       {label:"Phoenixville Farmers' Market",  color:"#7bbf6a", url:"https://www.phoenixvillefarmersmarket.org/"},
+  steel:        {label:"Steel City Coffeehouse",        color:"#ff7eb6", url:"https://www.steelcityphx.com/concerts-and-events"},
+  library:      {label:"Reads & Co. / Library",         color:"#f4c95d", url:"https://phoenixvillelibrary.org/"},
+  festival:     {label:"Festivals & Street Fairs",      color:"#ff4d6d", url:"https://www.phoenixville.org/Calendar.aspx"},
+  taproom:      {label:"Taprooms & Live Music",         color:"#c77dff", url:"https://phoenixville.online/10-breweries-in-phoenixville-area-and-1-distillery/"},
+  ticketmaster: {label:"Ticketmaster",                  color:"#026cdf", url:"https://www.ticketmaster.com/search?q=phoenixville+pa"}
 };
 
 /* ---------- Recurring weekly happenings (real, from sources) ---------- */
@@ -570,8 +575,52 @@ document.getElementById("search").addEventListener("input",e=>{query=e.target.va
   }
 })();
 
+/* ---------- Live event aggregation ---------- */
+async function loadLiveEvents() {
+  const statusEl = document.getElementById('live-status');
+  if (!TM_KEY) {
+    if (statusEl) statusEl.innerHTML = '<a href="https://developer.ticketmaster.com/" target="_blank" rel="noopener" style="color:var(--spark);font-family:\'JetBrains Mono\',monospace;font-size:.72rem;">Add Ticketmaster API key for live events ↗</a>';
+    return;
+  }
+  if (statusEl) statusEl.textContent = 'Loading live events…';
+  try {
+    const today = new Date().toISOString().slice(0,10) + 'T00:00:00Z';
+    const url = `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=19460&radius=8&unit=miles&size=100&sort=date,asc&startDateTime=${today}&apikey=${TM_KEY}`;
+    const resp = await fetch(url);
+    const data = await resp.json();
+    const raw = data?._embedded?.events || [];
+    const todayStr = new Date().toISOString().slice(0,10);
+    let added = 0;
+    raw.forEach(e => {
+      const date = e.dates?.start?.localDate || '';
+      if (!date || date < todayStr) return;
+      const tRaw = e.dates?.start?.localTime;
+      const time = tRaw ? new Date('1970-01-01T'+tRaw).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) : 'TBA';
+      const genre = [e.classifications?.[0]?.segment?.name, e.classifications?.[0]?.genre?.name].filter(Boolean).join(' · ');
+      const ev = {
+        date, time,
+        title: e.name,
+        venue: e._embedded?.venues?.[0]?.name || 'Phoenixville area',
+        src: 'ticketmaster',
+        blurb: genre || 'Live event near Phoenixville',
+        url: e.url
+      };
+      if (!allDated.find(x => x.title === ev.title && x.date === ev.date)) {
+        allDated.push(ev);
+        added++;
+      }
+    });
+    if (statusEl) statusEl.textContent = added ? `+${added} live events loaded` : 'Live events up to date';
+    render();
+  } catch(err) {
+    console.warn('Ticketmaster fetch failed:', err);
+    if (statusEl) statusEl.textContent = '';
+  }
+}
+
 buildChips();
 render();
+loadLiveEvents();
 </script>
 </body>
 </html>
