@@ -354,8 +354,6 @@ const RECURRING = [
 
 /* ---------- Dated upcoming events (real, sourced) ---------- */
 const EVENTS = [
-  {date:"2026-06-28", time:"4:00–6:00pm", title:"Phoenixville Music Series", venue:"Downtown Phoenixville", src:"borough",
-   blurb:"This Sunday's installment of the free summer music series.", url:"https://www.phoenixville.org/Calendar.aspx"},
   {date:"2026-07-01", end:"2026-07-12", time:"Daily", title:"Shorty's Short Film Contest", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
    blurb:"The Colonial's carnival-themed short-film showcase runs across nearly two weeks on the historic screens.", url:"https://thecolonialtheatre.com/events/"},
   {date:"2026-07-03", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street, Downtown", src:"borough",
@@ -496,7 +494,8 @@ function render(){
 
   /* dated events grouped by date */
   const wrap=document.getElementById("events");
-  const vis=allDated.filter(matches).sort((a,b)=>{
+  const today=new Date().toISOString().slice(0,10);
+  const vis=allDated.filter(o=>matches(o)&&(o.date==="recurring"||o.date>=today)).sort((a,b)=>{
     if(a.date==="recurring") return 1; if(b.date==="recurring") return -1;
     return a.date.localeCompare(b.date);
   });
