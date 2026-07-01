@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" role="img" aria-label="Phoenix">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 108" role="img" aria-label="Phoenix">
   <defs>
     <linearGradient id="f" x1="0.5" y1="0" x2="0.5" y2="1">
-      <stop offset="0%"   stop-color="#ffe082"/>
-      <stop offset="30%"  stop-color="#ffc24a"/>
-      <stop offset="65%"  stop-color="#ff8a3d"/>
+      <stop offset="0%"   stop-color="#fff0b3"/>
+      <stop offset="25%"  stop-color="#ffd166"/>
+      <stop offset="60%"  stop-color="#ff8a3d"/>
       <stop offset="100%" stop-color="#ff4d1c"/>
     </linearGradient>
-    <radialGradient id="glow" cx="50%" cy="40%" r="52%">
-      <stop offset="0%"   stop-color="#ffc24a" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#ff4d1c" stop-opacity="0"/>
-    </radialGradient>
   </defs>
 
-  <!-- Ambient glow -->
-  <ellipse cx="50" cy="48" rx="50" ry="50" fill="url(#glow)"/>
+  <!-- CREST: 3 flame feathers -->
+  <path d="M50 16 C48  8 45  3 47  0 C49  4 50 10 50 16Z" fill="#fff0b3"/>
+  <path d="M50 16 C50  7 49  2 50 -1 C51  2 50  7 50 16Z" fill="#ffe082"/>
+  <path d="M50 16 C52  8 55  3 53  0 C51  4 50 10 50 16Z" fill="#fff0b3"/>
 
-  <!-- LEFT WING: sweeps up-left from body -->
-  <path d="M41 43 C32 36 17 25 4 22
-           C2 21 1 23 3 26
-           C10 31 22 35 32 41
-           C37 45 39 50 41 54Z"
-        fill="url(#f)"/>
+  <!-- HEAD -->
+  <ellipse cx="50" cy="22" rx="8.5" ry="7.5" fill="#ffd166"/>
 
-  <!-- RIGHT WING: mirror -->
-  <path d="M59 43 C68 36 83 25 96 22
-           C98 21 99 23 97 26
-           C90 31 78 35 68 41
-           C63 45 61 50 59 54Z"
-        fill="url(#f)"/>
+  <!-- BEAK: small downward-pointing triangle -->
+  <path d="M47 28 L50 33 L53 28Z" fill="#ffb347"/>
 
-  <!-- BODY: teardrop from neck to base -->
-  <path d="M50 20
-           C46 28 43 39 44 51
-           C45 59 47 65 50 69
-           C53 65 55 59 56 51
-           C57 39 54 28 50 20Z"
-        fill="url(#f)"/>
+  <!-- NECK into body -->
+  <path d="M43 26 C41 32 40 39 39 46 L61 46 C60 39 59 32 57 26Z" fill="#ffb347"/>
 
-  <!-- HEAD: rounded, brighter gold -->
-  <ellipse cx="50" cy="22" rx="8" ry="7" fill="#ffd166"/>
+  <!-- BODY -->
+  <ellipse cx="50" cy="54" rx="12" ry="14" fill="url(#f)"/>
 
-  <!-- CREST: 3 flame feathers rising from head -->
-  <path d="M50 18 C49 11 47  7 49  4 C51  7 51 12 50 18Z" fill="#ffe082"/>
-  <path d="M50 18 C46 10 42  7 44  3 C47  8 49 13 50 18Z" fill="#ffc24a"/>
-  <path d="M50 18 C54 10 58  7 56  3 C53  8 51 13 50 18Z" fill="#ffc24a"/>
+  <!-- LEFT WING -->
+  <path d="M40 45
+           C 30 36 16 26  6 22
+           C  3 21  2 23  4 26
+           C 12 31 24 39 34 48
+           C 36 51 38 55 39 59
+           Z" fill="url(#f)"/>
 
-  <!-- TAIL: 5 flame feathers -->
-  <path d="M50 69 C50 77 50 86 50 94 C50 86 50 77 50 69Z"          fill="#ff8a3d"/>
-  <path d="M48 71 C45 79 44 88 46 96 C49 88 50 79 50 74Z"          fill="#ff6a2c"/>
-  <path d="M52 71 C55 79 56 88 54 96 C51 88 50 79 50 74Z"          fill="#ff6a2c"/>
-  <path d="M44 74 C40 82 38 92 41 100 C45 92 48 83 50 77Z"         fill="#ff5020"/>
-  <path d="M56 74 C60 82 62 92 59 100 C55 92 52 83 50 77Z"         fill="#ff5020"/>
+  <!-- LEFT primary feathers: 3 fingertips -->
+  <path d="M 6 22 C  2 19  0 24  1 27 C  3 25  5 23  7 24Z" fill="#ffd166"/>
+  <path d="M10 17 C  6 13  4 18  5 21 C  7 20  9 18 11 19Z" fill="#ffe082"/>
+  <path d="M16 12 C 13  8 10 12 12 15 C 13 14 15 12 17 13Z" fill="#ffe082"/>
+
+  <!-- RIGHT WING -->
+  <path d="M60 45
+           C 70 36 84 26 94 22
+           C 97 21 98 23 96 26
+           C 88 31 76 39 66 48
+           C 64 51 62 55 61 59
+           Z" fill="url(#f)"/>
+
+  <!-- RIGHT primary feathers: mirror -->
+  <path d="M94 22 C 98 19 100 24 99 27 C 97 25 95 23 93 24Z" fill="#ffd166"/>
+  <path d="M90 17 C 94 13  96 18 95 21 C 93 20 91 18 89 19Z" fill="#ffe082"/>
+  <path d="M84 12 C 87  8  90 12 88 15 C 87 14 85 12 83 13Z" fill="#ffe082"/>
+
+  <!-- TAIL: 5 long flame feathers -->
+  <path d="M50 67 C50 76 50 87 50 96 C50 87 50 76 50 67Z"          fill="#ff8a3d"/>
+  <path d="M45 68 C41 77 40 88 43 97 C46 88 48 77 50 72Z"          fill="#ff6a2c"/>
+  <path d="M55 68 C59 77 60 88 57 97 C54 88 52 77 50 72Z"          fill="#ff6a2c"/>
+  <path d="M39 70 C33 80 31 92 35 102 C40 92 44 81 48 75Z"         fill="#ff5020"/>
+  <path d="M61 70 C67 80 69 92 65 102 C60 92 56 81 52 75Z"         fill="#ff5020"/>
 </svg>
