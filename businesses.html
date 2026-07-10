@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>Local Businesses Near Phoenixville, PA — Grocery, Pharmacy, Auto & More</title>
+<meta name="description" content="A curated directory of local businesses within about 5 miles of Phoenixville, PA — grocery, pharmacy & urgent care, auto services, beauty, banking, fitness, pet care, and hardware.">
+<link rel="canonical" href="https://phoenixville.info/businesses.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/businesses.html">
+<meta property="og:title" content="Local Businesses Near Phoenixville, PA">
+<meta property="og:description" content="A curated directory of local businesses within about 5 miles of Phoenixville, PA — grocery, pharmacy, auto, beauty, banking, fitness, pet care, and hardware.">
+<meta property="og:site_name" content="Phoenixville Events">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Local Businesses Near Phoenixville, PA">
+<meta name="twitter:description" content="Filter local businesses near Phoenixville by category.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Local Businesses Near Phoenixville, PA","url":"https://phoenixville.info/businesses.html","description":"A curated directory of local businesses within about 5 miles of Phoenixville, PA, filterable by category","isPartOf":{"@type":"WebSite","name":"Phoenixville Events","url":"https://phoenixville.info/"}}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="businesses.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">← Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html" class="active">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+      Phoenixville · Within ~5 Miles
+    </p>
+    <h1 class="page-title">Local Businesses</h1>
+    <p class="lede">A curated directory of everyday local businesses around Phoenixville — grocery, pharmacy &amp; urgent care, auto services, beauty, banking, fitness, pet care, and hardware. Hand-compiled from public listings, not a live feed — always confirm hours before visiting.</p>
+    <div class="molten"></div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Filter businesses">
+  <div class="controls-inner">
+    <label class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="search" placeholder="Search by name, category, address…" aria-label="Search businesses">
+    </label>
+    <div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+    <span class="count" id="count"></span>
+  </div>
+</nav>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p>Compiled from public listings · Always verify hours before visiting · Not affiliated with the Borough of Phoenixville</p>
+    <p><a href="index.html">← Back to Events</a></p>
+  </div>
+</footer>
+
+<script>
+const BUSINESSES = [
+  /* ── GROCERY & MARKET ── */
+  {name:"ACME Markets",addr:"785 Starr St",cat:"Grocery",note:"Full-service supermarket with pharmacy. In-store, delivery, and DriveUp & Go pickup.",url:"https://local.acmemarkets.com/pa/phoenixville/785-starr-st.html"},
+  {name:"GIANT Food Stores",addr:"700 Nutt Rd",cat:"Grocery",note:"Grocery, pharmacy, and gas station under one roof. Delivery and pickup available.",url:"https://stores.giantfoodstores.com/pa/phoenixville/700-nutt-rd"},
+  {name:"Kimberton Whole Foods — Kimberton",addr:"2140 Kimberton Rd",cat:"Grocery",note:"Independent natural-foods market since 1994 — organic produce, raw dairy, humanely-raised meats, and a full deli.",url:"https://www.kimbertonwholefoods.com/locations/kimberton/"},
+  {name:"Redner's Warehouse Market",addr:"202 Schuylkill Rd, East Pikeland Twp",cat:"Grocery",note:"Warehouse-format grocery store open daily 6am–10pm.",url:null},
+
+  /* ── PHARMACY & HEALTH ── */
+  {name:"CVS Pharmacy",addr:"130 Schuylkill Rd",cat:"Pharmacy & Health",note:"Retail pharmacy with immunizations, prescription refills, and drive-thru.",url:"https://www.cvs.com/store-locator/phoenixville-pa-pharmacies/130-schuylkill-rd-phoenixville-pa-19460/storeid=1401"},
+  {name:"Walgreens",addr:"494 Nutt Rd",cat:"Pharmacy & Health",note:"Pharmacy with immunizations and drive-thru window.",url:"https://www.walgreens.com/locator/walgreens-494+nutt+rd-phoenixville-pa-19460/id=10388"},
+  {name:"AFC Urgent Care Phoenixville",addr:"265 Schuylkill Rd",cat:"Pharmacy & Health",note:"Walk-in urgent care, no appointment necessary. Open 7 days a week, Mon–Fri 8am–8pm.",url:"https://www.afcurgentcare.com/phoenixville/"},
+  {name:"Phoenixville Free Clinic",addr:"143 Church St",cat:"Pharmacy & Health",note:"Free clinic providing healthcare for the uninsured and underserved.",url:"https://www.phoenixvillefreeclinic.org/"},
+
+  /* ── AUTO ── */
+  {name:"Larry's Automotive Repair",addr:"1361 Valley Forge Rd",cat:"Auto",note:"Full-service preventive maintenance and repairs. Open Mon–Fri 8am–5:30pm.",url:null},
+  {name:"Clarks Auto Repair",addr:"1433 Pawlings Rd",cat:"Auto",note:"General auto repair shop.",url:null},
+  {name:"Ott's Garage",addr:"8 Otts Ln",cat:"Auto",note:"General auto repair shop.",url:null},
+  {name:"Wawa",addr:"Multiple locations · Phoenixville",cat:"Auto",note:"Convenience store and gas station — coffee, fuel, and made-to-order food.",url:"https://www.wawa.com/"},
+
+  /* ── BEAUTY ── */
+  {name:"Level Seven Salon",addr:"427 Schuylkill Rd",cat:"Beauty",note:"Eufora Experience hair salon. Closed Sundays.",url:"http://levelviisalon.com/"},
+  {name:"Unchained Barbershop",addr:"509 Kimberton Rd",cat:"Beauty",note:"Neighborhood barbershop — cuts, fades, and beard trims.",url:"https://www.unchainedbarbers.com/"},
+  {name:"Hair Cuttery",addr:"542 Kimberton Rd",cat:"Beauty",note:"Cut, color, and blow-out for women, men, and children. Appointments and walk-ins welcome.",url:"https://locations.haircuttery.com/pa/phoenixville/542-kimberton-road"},
+  {name:"Blue Label Men's Grooming",addr:"Downtown Phoenixville",cat:"Beauty",note:"Modern barbershop — haircuts, beard trims, hot towel shaves, and waxing.",url:null},
+
+  /* ── BANKING & FINANCE ── */
+  {name:"Citadel Credit Union",addr:"Kimberton Shoppes · Kimberton Rd",cat:"Banking",note:"Credit union branch serving the Phoenixville area for over a decade.",url:"https://www.citadelbanking.com/citadel-locations/citadel-phoenixville"},
+  {name:"Phoenixville Federal Bank & Trust",addr:"564 Nutt Rd",cat:"Banking",note:"Mutually-owned community bank serving Phoenixville for more than 100 years.",url:null},
+  {name:"Wells Fargo",addr:"101 S Main St",cat:"Banking",note:"Full-service bank branch.",url:"https://www.wellsfargo.com/"},
+  {name:"PNC Bank",addr:"159 Nutt Rd",cat:"Banking",note:"Full-service bank branch.",url:"https://www.pnc.com/"},
+  {name:"Citizens Bank",addr:"785 Starr St",cat:"Banking",note:"Full-service bank branch, in-store at ACME Markets.",url:"https://www.citizensbank.com/"},
+
+  /* ── FITNESS & WELLNESS ── */
+  {name:"Phoenixville YMCA",addr:"400 E Pothouse Rd",cat:"Fitness",note:"Fitness center, pools, group classes, and youth programs.",url:"https://www.philaymca.org/locations/phoenixville-ymca"},
+  {name:"Anytime Fitness",addr:"1570 Egypt Rd, Ste 130",cat:"Fitness",note:"24-hour access gym.",url:"https://www.anytimefitness.com/locations/phoenixville-pennsylvania-3518"},
+  {name:"Stride Spin and Fitness",addr:"Phoenixville",cat:"Fitness",note:"Studio classes — spin, barre, HIIT, hot yoga, and reformer Pilates.",url:"https://stridespinandfitness.com/location/phoenixville/"},
+
+  /* ── PET CARE ── */
+  {name:"Pet Supplies Plus",addr:"700 Nutt Rd",cat:"Pet Care",note:"Neighborhood pet store — food, treats, supplies, and in-store vet clinic days.",url:"https://www.petsuppliesplus.com/"},
+  {name:"Phoenixville Animal Hospital",addr:"1121 W Bridge St",cat:"Pet Care",note:"Full-service veterinary hospital. Mon–Fri 8am–6pm, Sat 9am–3pm.",url:"https://www.phoenixvilleanimalhospital.com/"},
+
+  /* ── HARDWARE & HOME ── */
+  {name:"Phoenixville Ace Hardware",addr:"542A Kimberton Rd",cat:"Hardware & Home",note:"Hardware, home improvement, lawn & garden, and tools.",url:"https://www.acehardware.com/store-details/19148"},
+  {name:"Phoenixville True Value Hardware",addr:"Phoenixville",cat:"Hardware & Home",note:"Building materials, tools, lawn & garden supplies, paint, electrical, and plumbing.",url:"https://stores.truevalue.com/pa/phoenixville/18740/"},
+  {name:"Tractor Supply Co.",addr:"Phoenixville",cat:"Hardware & Home",note:"Farm and ranch supplies, animal feed, pet supplies, and livestock essentials.",url:"https://www.tractorsupply.com/"}
+];
+
+const CATS = ["All","Grocery","Pharmacy & Health","Auto","Beauty","Banking","Fitness","Pet Care","Hardware & Home"];
+
+let active = "All", query = "";
+
+/* Build chips */
+const chipWrap = document.getElementById("chips");
+CATS.forEach(c => {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = c;
+  b.setAttribute("aria-pressed", c === "All");
+  b.addEventListener("click", () => {
+    active = c;
+    chipWrap.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  });
+  chipWrap.appendChild(b);
+});
+
+document.getElementById("search").addEventListener("input", e => {
+  query = e.target.value.toLowerCase();
+  render();
+});
+
+function render() {
+  const grid = document.getElementById("grid");
+  let shown = 0;
+  grid.querySelectorAll(".card").forEach(card => {
+    const ok = card.matches("[data-cat]") &&
+      (active === "All" || card.dataset.cat === active) &&
+      (!query || card.dataset.search.includes(query));
+    card.classList.toggle("hidden", !ok);
+    if (ok) shown++;
+  });
+  let empty = grid.querySelector(".empty");
+  if (!empty) { empty = document.createElement("p"); empty.className = "empty"; grid.appendChild(empty); }
+  empty.style.display = shown ? "none" : "block";
+  empty.textContent = "No businesses match your search.";
+  document.getElementById("count").textContent = shown + " place" + (shown === 1 ? "" : "s");
+}
+
+/* Build cards */
+function domainOf(url){ try{ return new URL(url).hostname.replace(/^www\./,""); }catch(e){ return null; } }
+function logo(domain){ return domain ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}` : null; }
+
+const grid = document.getElementById("grid");
+BUSINESSES.forEach(b => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.cat = b.cat;
+  card.dataset.search = (b.name + " " + b.addr + " " + b.cat + " " + b.note).toLowerCase();
+
+  const l = logo(domainOf(b.url));
+
+  card.innerHTML = `
+    <div class="card-head">
+      ${l ? `<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">` : ""}
+      <div>
+        <h3 class="card-name">${b.name}</h3>
+        <p class="card-addr">${b.addr} · Phoenixville, PA</p>
+      </div>
+    </div>
+    <div class="badges"><span class="badge badge-cat">${b.cat}</span></div>
+    ${b.note ? `<p class="card-note">${b.note}</p>` : ""}
+    ${b.url ? `<a class="card-link" href="${b.url}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}
+  `;
+  grid.appendChild(card);
+});
+
+render();
+
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

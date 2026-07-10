@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>Restaurants in Phoenixville, PA — 50+ Dining Options Near Bridge Street</title>
+<meta name="description" content="Explore 50+ restaurants within 5 miles of Phoenixville, PA. Filter by cuisine — American, Italian, Mexican, Asian, Irish Pub, Brewery, Wine Bar, and more.">
+<link rel="canonical" href="https://phoenixville.info/restaurants.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/restaurants.html">
+<meta property="og:title" content="Restaurants in Phoenixville, PA — 50+ Dining Options">
+<meta property="og:description" content="Explore 50+ restaurants within 5 miles of Phoenixville, PA. Filter by cuisine — American, Italian, Mexican, Asian, Irish Pub, Brewery, Wine Bar, and more.">
+<meta property="og:site_name" content="Phoenixville Events">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Restaurants in Phoenixville, PA — 50+ Dining Options">
+<meta name="twitter:description" content="Filter 50+ restaurants near Phoenixville by cuisine type.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Restaurants in Phoenixville, PA","url":"https://phoenixville.info/restaurants.html","description":"50+ restaurants within 5 miles of Phoenixville, PA, filterable by cuisine","isPartOf":{"@type":"WebSite","name":"Phoenixville Events","url":"https://phoenixville.info/"}}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="restaurants.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">← Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html" class="active">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+      Phoenixville · Within 5 Miles
+    </p>
+    <h1 class="page-title">Restaurants</h1>
+    <p class="lede">Every place to eat and drink in and around Phoenixville — from wood-fired Neapolitan pizza to a steakhouse that's been open since 1736.</p>
+    <div class="molten"></div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Filter restaurants">
+  <div class="controls-inner">
+    <label class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="search" type="search" placeholder="Search by name, cuisine, neighborhood…" aria-label="Search restaurants">
+    </label>
+    <div class="chips" id="chips" role="group" aria-label="Filter by cuisine"></div>
+    <span class="count" id="count"></span>
+  </div>
+</nav>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p>Compiled from public listings · Always verify hours before visiting · Not affiliated with the Borough of Phoenixville</p>
+    <p><a href="index.html">← Back to Events</a></p>
+  </div>
+</footer>
+
+<script>
+const RESTAURANTS = [
+  /* ── BRIDGE STREET: 100 BLOCK ── */
+{name:"Bluebird Distilling",addr:"100 Bridge St",cat:"Bar & Spirits",note:"Award-winning grain-to-glass craft distillery with cocktail bar. BYOF welcome. Open daily from 1pm.",tags:[],url:"https://www.bluebirddistilling.com/"},
+  {name:"Van Horn's Restaurant",addr:"106 Bridge St",cat:"American",note:"Comfort food with a Cajun flair, acclaimed cheesesteaks, huge portions, and a Sunday brunch. BYOB.",tags:["BYOB","Brunch"],url:null},
+  {name:"Chikara Sushi & Asian Fusion",addr:"131 Bridge St",cat:"Asian",note:"Contemporary Pan-Asian with creative sushi rolls, sashimi, and familiar Chinese dishes. BYOB.",tags:["BYOB"],url:null},
+  {name:"Sedona Taphouse",addr:"131 Bridge St #5",cat:"American",note:"Hand-cut steaks, sustainable seafood, and hundreds of craft beers. Happy Hour Mon–Fri 4–6pm.",tags:["Happy Hour"],url:"https://www.sedonataphouse.com/locations/phoenixville-pa/"},
+  {name:"Vintner's Table",addr:"135 Bridge St",cat:"Wine Bar",note:"Curated wine bar with charcuterie boards, artisan cheese pairings, and flatbreads.",tags:[],url:null},
+  {name:"Soltane Cafe",addr:"138 Bridge St",cat:"Café",note:"Cozy cafe serving coffee, breakfast bites, and dessert on the 100 block.",tags:[],url:null},
+  {name:"Sage Mediterranean Cuisine",addr:"150 Bridge St",cat:"Mediterranean",note:"20 years of fine Mediterranean and Middle Eastern dining — grilled kabobs, fresh seafood, lamb.",tags:[],url:"https://sagemediterranean.com/"},
+  {name:"Insomnia Cookies",addr:"150 Bridge St",cat:"Dessert",note:"Late-night warm cookie delivery and pickup — open until the early hours.",tags:[],url:null},
+  {name:"Sweet Brew Cafe",addr:"158 Bridge St",cat:"Café",note:"Real New York bagels shipped overnight, locally roasted coffee, and breakfast all morning.",tags:[],url:null},
+  {name:"Bridge Street Chocolates",addr:"175 Bridge St",cat:"Dessert",note:"Handcrafted chocolates and gourmet sweets. Tue–Wed 11am–5pm, Thu–Sat 11am–7pm, Sun 12–4pm.",tags:[],url:null},
+  {name:"El Burrito",addr:"180 Bridge St",cat:"Mexican",note:"Classic and affordable Mexican staples — a neighborhood go-to on the 100 block.",tags:[],url:null},
+  {name:"Il Granaio",addr:"184 Bridge St",cat:"Italian",note:"Homemade authentic Italian with patio and sidewalk dining. BYOB, locally sourced ingredients.",tags:["BYOB"],url:null},
+  {name:"Molly Maguire's",addr:"197 Bridge St",cat:"Irish Pub",note:"Premier authentic Irish pub with rooftop deck, live music Fri & Sat, and daily specials. Open until 2am Thu–Sat.",tags:["Live Music","Brunch"],url:"https://mollymaguiresphoenixville.com/"},
+  {name:"Steel City Coffeehouse",addr:"203 Bridge St",cat:"Brewery",note:"Listening room, brewery, and coffeehouse in one. Live original music, open mics, and seasonal coffee beers since 1996.",tags:["Live Music"],url:"https://www.steelcityphx.com/"},
+  {name:"Bistro on Bridge",addr:"212 Bridge St",cat:"American",note:"Craft beer, inventive New American food, rooftop beer garden, arcade games. Happy Hour Mon–Fri 4–6pm.",tags:["Happy Hour","Brunch"],url:"https://bistroonbridge.com/"},
+  {name:"Rivertown Taps",addr:"226 Bridge St",cat:"Bar & Spirits",note:"Award-winning self-pour tap wall gastropub with seasonal locally sourced menu. Closed Mon–Tue. Sunday Brunch 11am–2pm.",tags:["Brunch"],url:"https://www.rivertowntaps.com/"},
+  {name:"The Rec Room",addr:"230 Bridge St",cat:"Brewery",note:"Conshohocken Brewing taproom with shuffleboard, ping pong, foosball, and the full Conshohocken tap list.",tags:[],url:"https://conshohockenbrewing.com/recroommain"},
+  {name:"Dim Sum Court",addr:"236 Bridge St",cat:"Asian",note:"Authentic and innovative Chinese cuisine including dim sum. BYOB.",tags:["BYOB"],url:null},
+  {name:"Uncommon Ramen",addr:"239 Bridge St",cat:"Asian",note:"Slow-cooked broths with layers of flavor and texture — handcrafted ramen done right.",tags:[],url:null},
+  {name:"Rebel Hill Brewing",addr:"242 Bridge St",cat:"Brewery",note:"10-barrel downtown brewpub with 14 drafts, 2 hand pumps, specialty cocktails, and a full kitchen.",tags:[],url:"https://www.rebelhillbrewing.com/"},
+  {name:"Black Lab Bistro",addr:"248 Bridge St",cat:"American",note:"Contemporary American dinner Wed–Sun with a seasonal menu and Sunday brunch. BYOB. Sidewalk seating.",tags:["BYOB","Brunch"],url:"https://blacklabbistro.net/"},
+  {name:"Vecchia Napoli",addr:"249 Bridge St",cat:"Italian",note:"Neapolitan pies baked in wood-fired ovens built by Italian craftsmen — some of the best pizza in the area.",tags:[],url:null},
+  {name:"Avlós Greek Cuisine",addr:"258 Bridge St",cat:"Mediterranean",note:"Chef Nikoleta's authentic Greek cooking — lamb, fish, seasonal vegetables, every dish cooked from memory. BYOB.",tags:["BYOB"],url:"https://avlosgr.com/"},
+
+  /* ── BRIDGE STREET: 300 BLOCK ── */
+  {name:"Tai Me Up",addr:"301 Bridge St",cat:"Asian",note:"Authentic Thai cuisine on the 300 block. BYOB.",tags:["BYOB"],url:null},
+  {name:"Stable 12 Brewing",addr:"368 Bridge St",cat:"Brewery",note:"Craft brewery with 10 rotating taps, wings, shareables, burgers, and sandwiches.",tags:[],url:"https://www.stable12.com/"},
+
+  /* ── BRIDGE STREET: 400 BLOCK ── */
+  {name:"La Patrona Mexican Restaurant",addr:"400 Bridge St",cat:"Mexican",note:"Fresh guacamole made at your table, house-made mole with 26 ingredients, and a full tequila bar.",tags:[],url:null},
+  {name:"Root Down Biergarten",addr:"425 Bridge St",cat:"Brewery",note:"Outdoor biergarten with craft beer, nachos, wings, and live music in the summer months.",tags:["Live Music"],url:"https://www.rootdownbrewing.com/"},
+  {name:"Nudy's Bridge Street Cafe",addr:"450 Bridge St",cat:"Café",note:"Casual breakfast and lunch with egg dishes, breakfast sandwiches, and classic American fare.",tags:[],url:null},
+
+  /* ── EAST BRIDGE / MAIN ── */
+  {name:"Mansion House 37",addr:"37 E Bridge St",cat:"Bar & Spirits",note:"Beloved dive bar with great food, drinks, live music, open mics, and karaoke.",tags:["Live Music"],url:null},
+  {name:"Twelve78 Brewing Co.",addr:"Behind 35 Bridge St",cat:"Brewery",note:"Family-owned brewery with trivia Tuesdays, live music, line dancing, food trucks, and craft beer. Closed Mondays.",tags:["Live Music"],url:"https://www.twelve78brewing.com/"},
+  {name:"Root Down Brewing",addr:"1 N. Main St",cat:"Brewery",note:"Big timber-beamed 13,000 sq ft taproom with craft beer, a full food menu, live music, and monthly flea market.",tags:["Live Music"],url:"https://www.rootdownbrewing.com/"},
+  {name:"Three Brothers Grill",addr:"17 S. Main St",cat:"Mexican",note:"Authentic Mexican with fresh, locally sourced ingredients.",tags:[],url:null},
+  {name:"Brown's Cow Ice Cream",addr:"30 S. Main St",cat:"Dessert",note:"Hand-dipping Bassett's Ice Cream since 2006 — a Phoenixville institution.",tags:[],url:null},
+  {name:"Café com Leite",addr:"117 S. Main St",cat:"Café",note:"Brazilian bakery with a health focus — gluten-free options, nutritious bites, and pão de queijo.",tags:[],url:null},
+
+  /* ── CANAL STREET ── */
+  {name:"Fitzwater Station",addr:"264 Canal St",cat:"American",note:"BBQ restaurant and bar with daily hours from 11am to 10pm along the canal.",tags:[],url:null},
+
+  /* ── MONT CLARE (across the river) ── */
+  {name:"Lock 29",addr:"129 Bridge St, Mont Clare",cat:"American",note:"Full-service waterfront bar and restaurant with craft beers, house-made cocktails, and outdoor patio seating on the river.",tags:[],url:null},
+  {name:"Mont Clare Deli & Market",addr:"500 Bridge St, Mont Clare",cat:"Deli",note:"The best sandwiches, cheesesteaks, grab-and-go prepared foods, breakfast, coffee, and pastry.",tags:[],url:null},
+
+  /* ── OFF BRIDGE STREET ── */
+  {name:"Great American Pub",addr:"148 Bridge St",cat:"American",note:"Hefty portions of comfort food — burgers, artisanal pizzas, and game-day screens. Brunch Sat–Sun 11am–2pm.",tags:["Brunch"],url:null},
+  {name:"Nook and Kranny Kafe",addr:"847 Valley Forge Rd",cat:"Café",note:"#1 rated on TripAdvisor — beloved neighborhood breakfast and brunch spot. Mon–Fri 7am–3pm, Sat–Sun 8am–3pm.",tags:["Brunch"],url:"https://www.nookandkrannykafe.com/"},
+  {name:"Seven Stars Inn",addr:"263 Hoffecker Rd",cat:"American",note:"Historic steakhouse open since 1736 — four-star dining with large cuts of prime beef, veal, and seafood. Tue–Sun from 3–4:30pm.",tags:["Historic"],url:null},
+  {name:"Thai Place Restaurant",addr:"700 Nutt Rd",cat:"Asian",note:"Authentic Thai food since 2001 — a consistent local favorite with full dine-in, takeout, and delivery.",tags:[],url:"https://www.ilovethaiplace.com/"},
+  {name:"Aman's Indian Bistro",addr:"277 Schuylkill Rd",cat:"Indian",note:"Highly rated Indian restaurant with a full menu of curries, tandoor dishes, and vegetarian options.",tags:[],url:"https://www.amansindianbistro.com/"},
+  {name:"Mizu Asian Bistro",addr:"1570 Egypt Rd",cat:"Asian",note:"Chinese, Japanese, sushi, and Thai under one roof — one of the highest-rated restaurants in the area.",tags:[],url:"https://www.mizuphoenixville.com/"},
+  {name:"Failla's Pizzeria & Ristorante",addr:"2669 Charlestown Rd",cat:"Italian",note:"Beloved neighborhood pizza and Italian ristorante on the outskirts of Phoenixville.",tags:[],url:"https://www.faillaspizza.com/"},
+  {name:"Perkiomen Cafe (The Perky)",addr:"400 Brower Ave",cat:"Café",note:"Local cafe and bakery with comfort food, BBQ specials, and a homey neighborhood vibe.",tags:[],url:"https://theperky.com/"}
+];
+
+const CATS = ["All","American","Asian","Bar & Spirits","Brewery","Café","Dessert","Deli","Indian","Irish Pub","Italian","Mediterranean","Mexican","Wine Bar"];
+
+let active = "All", query = "";
+
+/* Build chips */
+const chipWrap = document.getElementById("chips");
+CATS.forEach(c => {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = c;
+  b.setAttribute("aria-pressed", c === "All");
+  b.addEventListener("click", () => {
+    active = c;
+    chipWrap.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  });
+  chipWrap.appendChild(b);
+});
+
+document.getElementById("search").addEventListener("input", e => {
+  query = e.target.value.toLowerCase();
+  render();
+});
+
+function render() {
+  const grid = document.getElementById("grid");
+  let shown = 0;
+  grid.querySelectorAll(".card").forEach(card => {
+    const ok = card.matches("[data-cat]") &&
+      (active === "All" || card.dataset.cat === active) &&
+      (!query || card.dataset.search.includes(query));
+    card.classList.toggle("hidden", !ok);
+    if (ok) shown++;
+  });
+  let empty = grid.querySelector(".empty");
+  if (!empty) { empty = document.createElement("p"); empty.className = "empty"; grid.appendChild(empty); }
+  empty.style.display = shown ? "none" : "block";
+  empty.textContent = "No restaurants match your search.";
+  document.getElementById("count").textContent = shown + " place" + (shown === 1 ? "" : "s");
+}
+
+/* Build cards */
+function domainOf(url){ try{ return new URL(url).hostname.replace(/^www\./,""); }catch(e){ return null; } }
+function logo(domain){ return domain ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}` : null; }
+
+const grid = document.getElementById("grid");
+RESTAURANTS.forEach(r => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.dataset.cat = r.cat;
+  card.dataset.search = (r.name + " " + r.addr + " " + r.cat + " " + r.note + " " + r.tags.join(" ")).toLowerCase();
+
+  const badgeHTML = [
+    `<span class="badge badge-cuisine">${r.cat}</span>`,
+    ...r.tags.map(t => {
+      if (t === "BYOB")     return `<span class="badge badge-byob">BYOB</span>`;
+      if (t === "Happy Hour") return `<span class="badge badge-hh">Happy Hour</span>`;
+      if (t === "Brunch")   return `<span class="badge badge-brunch">Brunch</span>`;
+      if (t === "Historic") return `<span class="badge badge-historic">Est. 1736</span>`;
+      if (t === "Live Music") return `<span class="badge badge-new">Live Music</span>`;
+      return `<span class="badge badge-cuisine">${t}</span>`;
+    })
+  ].join("");
+
+  const l = logo(domainOf(r.url));
+
+  card.innerHTML = `
+    <div class="card-head">
+      ${l ? `<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">` : ""}
+      <div>
+        <h3 class="card-name">${r.name}</h3>
+        <p class="card-addr">${r.addr} · Phoenixville, PA</p>
+      </div>
+    </div>
+    <div class="badges">${badgeHTML}</div>
+    ${r.note ? `<p class="card-note">${r.note}</p>` : ""}
+    ${r.url ? `<a class="card-link" href="${r.url}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}
+  `;
+  grid.appendChild(card);
+});
+
+render();
+
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+
+</body>
+</html>

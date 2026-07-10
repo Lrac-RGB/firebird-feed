@@ -3,283 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Phoenixville Events</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>Phoenixville Events — What's Happening in Phoenixville, PA</title>
+<meta name="description" content="Your community guide to events, live music, restaurants, happy hours, and bars in Phoenixville, PA — First Fridays, the Colonial Theatre, Bridge Street, and beyond.">
+<link rel="canonical" href="https://phoenixville.info/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/">
+<meta property="og:title" content="Phoenixville Events — What's Happening in Phoenixville, PA">
+<meta property="og:description" content="Your community guide to events, live music, restaurants, happy hours, and bars in Phoenixville, PA — First Fridays, the Colonial Theatre, Bridge Street, and beyond.">
+<meta property="og:site_name" content="Phoenixville Events">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Phoenixville Events — What's Happening in Phoenixville, PA">
+<meta name="twitter:description" content="Your community guide to events, live music, restaurants, happy hours, and bars in Phoenixville, PA.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Phoenixville Events","url":"https://phoenixville.info/","description":"Local guide to events, restaurants, happy hours, and hotels in Phoenixville, PA","publisher":{"@type":"Organization","name":"Phoenixville Events","url":"https://phoenixville.info/"}}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.svg" sizes="any">
-<style>
-  :root{
-    --iron:#14161b;
-    --iron-2:#1a1d25;
-    --surface:#1f232d;
-    --surface-2:#262b37;
-    --line:#333a48;
-    --ember:#ff6a2c;
-    --spark:#ffb347;
-    --quench:#4f95c0;   /* cooled steel blue — civic */
-    --leaf:#7bbf6a;     /* market green */
-    --ink-100:#f6efe6;
-    --ink-70:#bdb6ab;
-    --ink-50:#8b8579;
-    --heat-grad:linear-gradient(100deg,#ff4d1c 0%,#ff8a3d 40%,#ffc24a 100%);
-    --shadow:0 18px 40px -22px rgba(0,0,0,.8);
-  }
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="index.css">
 
-  *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    margin:0;
-    background:
-      radial-gradient(900px 500px at 78% -8%, rgba(255,106,44,.16), transparent 60%),
-      radial-gradient(700px 500px at 6% 2%, rgba(79,149,192,.12), transparent 55%),
-      var(--iron);
-    color:var(--ink-100);
-    font-family:'Archivo',system-ui,sans-serif;
-    line-height:1.5;
-    -webkit-font-smoothing:antialiased;
-  }
-  a{color:inherit}
-
-  /* ---------- HERO ---------- */
-  .hero{
-    position:relative;
-    overflow:hidden;
-    padding:clamp(2.4rem,6vw,5rem) clamp(1.1rem,5vw,4rem) clamp(1.6rem,3vw,2.4rem);
-    border-bottom:1px solid var(--line);
-  }
-  .embers{position:absolute;inset:0;pointer-events:none;z-index:0}
-  .hero-phoenix{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
-  .ember{
-    position:absolute;bottom:-16px;pointer-events:none;
-    opacity:0;animation:rise linear infinite;
-  }
-  @keyframes rise{
-    0%{transform:translateY(0) scale(1);opacity:0}
-    12%{opacity:.9}
-    70%{opacity:.55}
-    100%{transform:translateY(-78vh) translateX(var(--drift,14px)) scale(.3);opacity:0}
-  }
-  .hero-inner{position:relative;z-index:1;max-width:1080px;margin:0 auto}
-  .eyebrow{
-    display:flex;align-items:center;gap:.6rem;
-    font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.18em;
-    text-transform:uppercase;color:var(--spark);margin:0 0 1.1rem;
-  }
-  .eyebrow .mark{width:22px;height:22px;flex:0 0 auto}
-  .wordmark{
-    font-family:'Anton',sans-serif;font-weight:400;
-    font-size:clamp(3.1rem,12vw,8.2rem);line-height:.86;
-    letter-spacing:.01em;margin:0;text-transform:uppercase;
-    background:var(--heat-grad);-webkit-background-clip:text;background-clip:text;
-    color:transparent;
-  }
-  .wordmark .sub{
-    display:block;color:var(--ink-100);background:none;-webkit-text-fill-color:var(--ink-100);
-    font-size:clamp(.95rem,2.4vw,1.4rem);letter-spacing:.34em;
-    margin-top:.5rem;
-  }
-  .lede{
-    max-width:46ch;color:var(--ink-70);font-size:clamp(1rem,2.2vw,1.18rem);
-    margin:1.4rem 0 0;
-  }
-  .molten{
-    height:3px;margin:1.8rem 0 0;border-radius:2px;
-    background:var(--heat-grad);
-    box-shadow:0 0 18px 1px rgba(255,120,50,.45);
-  }
-  .stats{
-    display:flex;flex-wrap:wrap;gap:1.6rem 2.6rem;margin:1.5rem 0 0;
-    font-family:'JetBrains Mono',monospace;
-  }
-  .stat b{font-size:1.5rem;color:var(--ink-100);display:block;font-weight:700}
-  .stat span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50)}
-
-  /* ---------- CONTROLS ---------- */
-  .controls{
-    position:sticky;top:0;z-index:20;
-    background:rgba(20,22,27,.86);backdrop-filter:blur(10px);
-    border-bottom:1px solid var(--line);
-    padding:.85rem clamp(1.1rem,5vw,4rem);
-  }
-  .controls-inner{max-width:1080px;margin:0 auto;display:flex;flex-wrap:wrap;gap:.7rem;align-items:center}
-  .search{
-    flex:1 1 220px;display:flex;align-items:center;gap:.55rem;
-    background:var(--surface);border:1px solid var(--line);border-radius:9px;
-    padding:.55rem .8rem;
-  }
-  .search svg{flex:0 0 auto;opacity:.6}
-  .search input{
-    flex:1;background:none;border:0;color:var(--ink-100);font-family:'Archivo',sans-serif;
-    font-size:.95rem;outline:none;
-  }
-  .search input::placeholder{color:var(--ink-50)}
-  .chips{display:flex;flex-wrap:wrap;gap:.45rem}
-  .chip{
-    font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:.04em;
-    background:var(--surface);color:var(--ink-70);
-    border:1px solid var(--line);border-radius:30px;
-    padding:.45rem .85rem;cursor:pointer;transition:.18s;white-space:nowrap;
-  }
-  .chip:hover{border-color:var(--ink-50);color:var(--ink-100)}
-  .chip[aria-pressed="true"]{
-    background:var(--ember);color:#1a0e07;border-color:var(--ember);font-weight:700;
-  }
-  .chip .dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:.35rem;vertical-align:middle}
-
-  /* ---------- MAIN ---------- */
-  main{max-width:1080px;margin:0 auto;padding:clamp(1.4rem,4vw,2.8rem) clamp(1.1rem,5vw,4rem) 4rem}
-
-  .section-label{
-    font-family:'Anton',sans-serif;text-transform:uppercase;letter-spacing:.04em;
-    font-size:clamp(1.1rem,3vw,1.5rem);margin:2.4rem 0 1rem;display:flex;align-items:center;gap:.8rem;color:var(--ink-100);
-  }
-  .section-label:first-of-type{margin-top:.4rem}
-  .section-label::after{content:"";flex:1;height:1px;background:var(--line)}
-  .section-note{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--ink-50);letter-spacing:.08em}
-
-  /* recurring strip */
-  .recurring{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:.8rem}
-  .rec-card{
-    background:linear-gradient(180deg,var(--surface-2),var(--surface));
-    border:1px solid var(--line);border-radius:12px;padding:1rem 1.05rem;
-    position:relative;overflow:hidden;
-  }
-  .rec-card .cadence{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--spark)}
-  .rec-card h3{font-family:'Archivo';font-size:1.04rem;margin:.35rem 0 .3rem;font-weight:700}
-  .rec-card p{margin:0;color:var(--ink-70);font-size:.86rem}
-  .rec-card .src{margin-top:.6rem;font-size:.72rem}
-
-  /* marquee acts */
-  .marquee{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:.7rem}
-  .marq-card{
-    display:flex;flex-direction:column;gap:.3rem;
-    background:var(--surface);border:1px solid var(--line);border-radius:11px;
-    padding:.85rem .95rem;border-left:3px solid var(--accent,var(--ember));
-  }
-  .marq-card h3{font-size:.98rem;margin:0;font-weight:700;line-height:1.25}
-  .marq-card p{margin:0;color:var(--ink-70);font-size:.82rem}
-  .marq-card a{
-    margin-top:.35rem;align-self:flex-start;font-family:'JetBrains Mono',monospace;
-    font-size:.7rem;color:var(--spark);text-decoration:none;border:1px solid var(--line);
-    padding:.28rem .6rem;border-radius:6px;transition:.15s;
-  }
-  .marq-card a:hover{background:var(--ember);color:#1a0e07;border-color:var(--ember)}
-
-  /* venue directory */
-  .venues{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:.7rem}
-  .venue-card{
-    background:linear-gradient(180deg,var(--surface-2),var(--surface));
-    border:1px solid var(--line);border-radius:11px;padding:.9rem 1rem;
-    border-top:3px solid var(--accent,var(--ember));
-  }
-  .venue-card h3{font-size:1rem;margin:0 0 .2rem;font-weight:700}
-  .venue-card .kind{color:var(--ink-70);font-size:.82rem;margin:0 0 .45rem}
-  .venue-card .addr{font-family:'JetBrains Mono',monospace;font-size:.72rem;color:var(--ink-50);display:flex;align-items:center;gap:.4rem}
-  .venue-card .addr a{color:var(--spark);text-decoration:none;margin-left:auto}
-  .venue-card .addr a:hover{text-decoration:underline}
-
-  /* date-grouped events */
-  .daygroup{margin-bottom:1.6rem}
-  .day-head{
-    font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;
-    color:var(--ink-50);margin:0 0 .6rem;padding-left:.1rem;
-  }
-  .card{
-    display:grid;grid-template-columns:74px 1fr;gap:1.1rem;
-    background:var(--surface);border:1px solid var(--line);border-radius:13px;
-    padding:1rem 1.15rem;margin-bottom:.7rem;
-    position:relative;transition:.18s;box-shadow:var(--shadow);
-  }
-  .card::before{
-    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:13px 0 0 13px;
-    background:var(--accent,var(--ember));opacity:.55;transition:.18s;
-  }
-  .card:hover{transform:translateY(-2px);border-color:#465064}
-  .card:hover::before{opacity:1;box-shadow:0 0 14px 1px var(--accent,var(--ember))}
-  .datebox{text-align:center;border-right:1px solid var(--line);padding-right:.4rem}
-  .datebox .mon{font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ember)}
-  .datebox .num{font-family:'Anton',sans-serif;font-size:2rem;line-height:1;color:var(--ink-100)}
-  .datebox .dow{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--ink-50);text-transform:uppercase;letter-spacing:.1em}
-  .body h3{margin:.05rem 0 .3rem;font-size:1.08rem;font-weight:700;line-height:1.25}
-  .meta{display:flex;flex-wrap:wrap;gap:.35rem 1rem;font-size:.82rem;color:var(--ink-70);margin-bottom:.45rem}
-  .meta .time{font-family:'JetBrains Mono',monospace;color:var(--spark)}
-  .blurb{margin:0 0 .6rem;color:var(--ink-70);font-size:.9rem}
-  .card-foot{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem}
-  .src{
-    display:inline-flex;align-items:center;gap:.4rem;
-    font-family:'JetBrains Mono',monospace;font-size:.7rem;letter-spacing:.04em;
-    color:var(--ink-70);
-  }
-  .src .dot{width:8px;height:8px;border-radius:50%;flex:0 0 auto}
-  .out{
-    margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.72rem;
-    color:var(--spark);text-decoration:none;border:1px solid var(--line);
-    padding:.32rem .7rem;border-radius:7px;transition:.18s;
-  }
-  .out:hover{background:var(--ember);color:#1a0e07;border-color:var(--ember)}
-
-  .empty{
-    text-align:center;padding:3rem 1rem;color:var(--ink-50);
-    border:1px dashed var(--line);border-radius:13px;font-family:'JetBrains Mono',monospace;
-  }
-  .empty b{color:var(--ink-100);display:block;font-size:1.05rem;margin-bottom:.4rem;font-family:'Archivo'}
-
-  /* ---------- FOOTER ---------- */
-  footer{border-top:1px solid var(--line);padding:2.4rem clamp(1.1rem,5vw,4rem) 3rem;background:var(--iron-2)}
-  .foot-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:1.6rem}
-  @media(min-width:760px){.foot-inner{grid-template-columns:1.4fr 1fr}}
-  .foot h4{font-family:'Anton';text-transform:uppercase;letter-spacing:.05em;font-size:1rem;margin:0 0 .7rem}
-  .foot p{color:var(--ink-70);font-size:.88rem;margin:.4rem 0}
-  .sources-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.5rem}
-  .sources-list a{
-    display:flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--ink-70);
-    font-size:.86rem;transition:.15s;
-  }
-  .sources-list a:hover{color:var(--ink-100)}
-  .sources-list .dot{width:9px;height:9px;border-radius:50%;flex:0 0 auto}
-  .fineprint{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ink-50);margin-top:1.4rem;line-height:1.7}
-
-  :focus-visible{outline:2px solid var(--spark);outline-offset:2px;border-radius:4px}
-
-  @media (prefers-reduced-motion: reduce){
-    .ember{display:none}
-    .card,.chip,.out{transition:none}
-    html{scroll-behavior:auto}
-  }
-</style>
 </head>
 <body>
 
+<nav class="topnav">
+  <a href="index.html" class="home">Phoenixville Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
 <header class="hero">
   <div class="embers" id="embers" aria-hidden="true"></div>
-
-  <!-- Fire hero background -->
-  <svg class="hero-phoenix" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-       viewBox="0 0 1200 520" preserveAspectRatio="xMaxYMid slice">
-    <defs>
-      <radialGradient id="halo" cx="76%" cy="55%" r="46%">
-        <stop offset="0%"   stop-color="#ff8a3d" stop-opacity="0.14"/>
-        <stop offset="100%" stop-color="#ff4d1c" stop-opacity="0"/>
-      </radialGradient>
-      <linearGradient id="hpg" x1="0.5" y1="1" x2="0.5" y2="0">
-        <stop offset="0%"   stop-color="#cc2200"/>
-        <stop offset="50%"  stop-color="#ff6600"/>
-        <stop offset="100%" stop-color="#ffcc00"/>
-      </linearGradient>
-    </defs>
-
-    <rect width="1200" height="520" fill="url(#halo)"/>
-
-    <!-- Ghost fire — source 80×100, scale=5.0, centered at right (900, 530) -->
-    <!-- translate=(900-40*5, 530-100*5) = (700, 30) -->
-    <g fill="url(#hpg)" opacity="0.10" transform="translate(700, 30) scale(5.0)">
-      <path d="M 20 98 C 10 96  4 82  8 64 C 11 52 15 42 18 30 C 22 42 24 54 24 66 C 24 84 18 96 20 98 Z"/>
-      <path d="M 60 98 C 70 96 76 82 72 64 C 69 52 65 42 62 30 C 58 42 56 54 56 66 C 56 84 62 96 60 98 Z"/>
-      <path d="M 40 98 C 22 98 10 80 16 56 C 20 42 28 26 40  8 C 52 26 60 42 64 56 C 70 80 58 98 40 98 Z"/>
-    </g>
-  </svg>
   <div class="hero-inner">
     <p class="eyebrow">
       <svg class="mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
@@ -299,6 +76,13 @@
   </div>
 </header>
 
+<div class="today-strip">
+  <a href="today.html" class="today-banner">
+    <span class="today-arrow">→</span>
+    <span class="today-banner-text">What's happening today? <span id="today-day-label"></span></span>
+  </a>
+</div>
+
 <nav class="controls" aria-label="Filter events">
   <div class="controls-inner">
     <label class="search">
@@ -306,7 +90,6 @@
       <input id="search" type="search" placeholder="Search events, venues, music…" aria-label="Search events">
     </label>
     <div class="chips" id="chips"></div>
-    <span id="live-status" style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--ink-50);white-space:nowrap"></span>
   </div>
 </nav>
 
@@ -330,7 +113,7 @@
 <footer>
   <div class="foot-inner" style="border-bottom:1px solid var(--line);padding-bottom:1.4rem;margin-bottom:1.4rem;display:flex;flex-wrap:wrap;align-items:center;gap:1rem .8rem">
     <span style="font-family:'JetBrains Mono',monospace;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-50)">Founding sponsor</span>
-    <a href="sponsors.html" style="font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;background:var(--heat-grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none;">Superior Beverage</a>
+    <a href="sponsors.html" style="font-family:'Anton',sans-serif;font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;background:var(--heat-grad);-webkit-background-clip:text;background-clip:text;color:transparent;text-decoration:none;">Superior Beer &amp; More</a>
     <a href="sponsors.html" style="margin-left:auto;font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--spark);text-decoration:none;border:1px solid var(--line);padding:.3rem .7rem;border-radius:7px;transition:.15s">Our Sponsors ↗</a>
   </div>
   <div class="foot-inner">
@@ -347,162 +130,8 @@
   </div>
 </footer>
 
+<script src="data.js"></script>
 <script>
-/* ---------- Source definitions ---------- */
-/* Get a free key at https://developer.ticketmaster.com/ */
-const TM_KEY = 'vpkImG2uBXopMMn40qPHtZcFAm5cusCi';
-
-const SOURCES = {
-  borough:      {label:"Borough of Phoenixville",      color:"#4f95c0", url:"https://www.phoenixville.org/Calendar.aspx"},
-  colonial:     {label:"The Colonial Theatre",          color:"#ff6a2c", url:"https://thecolonialtheatre.com/events/"},
-  market:       {label:"Phoenixville Farmers' Market",  color:"#7bbf6a", url:"https://www.phoenixvillefarmersmarket.org/"},
-  steel:        {label:"Steel City Coffeehouse",        color:"#ff7eb6", url:"https://www.steelcityphx.com/concerts-and-events"},
-  library:      {label:"Reads & Co. / Library",         color:"#f4c95d", url:"https://phoenixvillelibrary.org/"},
-  festival:     {label:"Festivals & Street Fairs",      color:"#ff4d6d", url:"https://www.phoenixville.org/Calendar.aspx"},
-  taproom:      {label:"Taprooms & Live Music",         color:"#c77dff", url:"https://phoenixville.online/10-breweries-in-phoenixville-area-and-1-distillery/"},
-  pxv_online:   {label:"Phoenixville.online",           color:"#00b8a9", url:"https://phoenixville.online/"},
-  ticketmaster: {label:"Ticketmaster",                  color:"#026cdf", url:"https://www.ticketmaster.com/search?q=phoenixville+pa"}
-};
-
-/* ---------- Recurring weekly happenings (real, from sources) ---------- */
-const RECURRING = [
-  {cadence:"Saturdays · 9am–12pm", title:"Phoenixville Farmers' Market", src:"market",
-   text:"Producer-only market along French Creek under the Gay Street Bridge — local produce, baked goods, weekly live music and a kids' play area."},
-  {cadence:"Sundays · 4–6pm", title:"Phoenixville Music Series", src:"borough",
-   text:"Free outdoor live-music sessions downtown through the summer, organized on the borough's community events calendar."},
-  {cadence:"First Friday · 5:30–8:30pm", title:"First Friday", src:"borough",
-   text:"Monthly evening stroll along Bridge Street — shops, galleries and restaurants open late with sidewalk happenings."},
-  {cadence:"Thursdays · evening", title:"Live Music at Steel City", src:"steel",
-   text:"The Bridge Street coffeehouse & brewery runs an original-music lineup, with the kitchen and taps open late on show nights."},
-  {cadence:"Weekly · open mic", title:"Open Mic & Listening Room", src:"steel",
-   text:"Steel City's award-winning listening room hosts open-mic nights for songwriters and players — sign up, plug in, and take the room."},
-  {cadence:"Thu & Sat · ~9:30pm", title:"Live Music at Bistro on Bridge", src:"taproom",
-   text:"Bands take the upstairs Analog Bar Room most Thursday and Saturday nights — 30+ taps below, beer garden overlooking downtown, and room to dance."},
-  {cadence:"Tuesdays · evening", title:"Trivia Night at Twelve78", src:"taproom",
-   text:"The family-owned brewery behind 35 Bridge St runs its weekly trivia night — pet-friendly, easy parking in Lot #7, fresh craft beer all night."},
-  {cadence:"Fri eve & weekend afternoons", title:"Live Music & Music Bingo at Twelve78", src:"taproom",
-   text:"Twelve78 packs the calendar with live bands (Friday evenings, Saturday & Sunday afternoons), Friday Music Bingo, food trucks, line dancing and more."},
-  {cadence:"Weekends & First Fridays · ~6–9pm", title:"Live Music at The Boardroom", src:"taproom",
-   text:"The Boardroom Restaurant & Bottle Shop hosts acoustic singer-songwriters most weekends and on First Fridays, with Boardroom Spirits cocktails and a full food menu."},
-  {cadence:"Fridays · evening", title:"Cocktail Tastings & Live Music at Bluebird Distilling", src:"taproom",
-   text:"Bluebird Distilling on 100 Bridge St pours their award-winning craft spirits — vodka, whiskey, rum and seasonal cocktails — with live music and tastings most Friday evenings."},
-  {cadence:"Weekends", title:"Tap Room Events at The Rec Room", src:"taproom",
-   text:"Conshohocken Brewing's Rec Room at 230 Bridge St runs weekend events in the lively tap-room event space — live music, themed nights, and the full Conshohocken tap list."},
-  {cadence:"Tue & Thu · evening", title:"Trivia & Pub Nights at Molly Maguire's", src:"taproom",
-   text:"Molly Maguire's Irish Restaurant & Pub (197 Bridge St) hosts nightly specials, pub quiz nights, and live music on the rooftop deck overlooking downtown."},
-  {cadence:"Weekends · afternoon & evening", title:"Live Music at Root Down Brewing", src:"taproom",
-   text:"Root Down Brewing's big timber-beamed taproom at 1 N. Main St books local acts on weekends — craft beer, a full food menu, and room for the whole crew."},
-  {cadence:"Thursdays · evening", title:"Events at Rebel Hill Brewing", src:"taproom",
-   text:"Rebel Hill Brewing (242 Bridge St) runs a regular lineup of tap room events — trivia, themed nights, and live music — alongside their rotating craft beer menu and full kitchen."},
-  {cadence:"Weekends", title:"Patio Events at Sly Fox Brewhouse", src:"taproom",
-   text:"One of the region's pioneering craft breweries (est. 1995) runs weekend events and seasonal tap takeovers on their patio — classic Sly Fox brews and rotating specials."},
-  {cadence:"Fri & Sat · evening", title:"Live Music at Stable 12 Brewing", src:"taproom",
-   text:"Stable 12 hosts live local acts on Friday and Saturday evenings, with their full food menu, craft beers and an easy-going taproom vibe."},
-  {cadence:"Last Sunday of each month", title:"Punk Rock Flea Market at Root Down", src:"taproom",
-   text:"Root Down Brewing's monthly market on 1 N. Main St packs the taproom with vendors selling one-of-a-kind goods alongside live DJs and fresh pints. No cover."},
-  {cadence:"First Tuesdays · evening", title:"Science On Tap at Root Down", src:"taproom",
-   text:"Community science conversations hosted by professionals in the back room at Root Down Brewing — family-friendly, thought-provoking, and free with your beer."},
-  {cadence:"Weekends · varying times", title:"Live Irish Sessions at Molly Maguire's", src:"taproom",
-   text:"Traditional Irish trad sessions upstairs at 197 Bridge St — fiddles, bouzouki, bodhráns and voices. Check their music calendar for dates and set times."},
-  {cadence:"Fri & Sat · evenings", title:"Live Music at Iron Hill Brewery", src:"taproom",
-   text:"Iron Hill Brewery (130 Bridge St) hosts live music on weekend evenings alongside their award-winning craft beers and full kitchen. Check their events page for the lineup."},
-  {cadence:"Fri 4–10pm · Sat & Sun 7am–10pm (May–Oct)", title:"PXV Inside Out — Open-Air Dining", src:"pxv_online",
-   text:"Bridge Street closes to traffic from Starr to Gay St all summer — al fresco dining at local restaurants, live music, craft beverages and boutique browsing. Open container permitted on designated blocks. Weather cancellations announced by 8:30am at phoenixville.org."}
-];
-
-/* ---------- Dated upcoming events (real, sourced) ---------- */
-const EVENTS = [
-  {date:"2026-07-02", time:"6:00pm", title:"Dungeons & Drafts", venue:"Twelve78 Brewing Co., behind 35 Bridge St", src:"taproom",
-   blurb:"Bring your character — battle monsters and complete quests at tabletop gaming night while enjoying Twelve78 craft beer. Tickets at dungeonsndrafts.com.", url:"https://www.twelve78brewing.com/event-calendar/"},
-  {date:"2026-07-03", time:"Evening", title:"Leading Zero (Live Music)", venue:"Molly Maguire's, 197 Bridge St", src:"taproom",
-   blurb:"Live band performance at Molly Maguire's as part of the America 250th Celebration weekend. Rooftop deck open.", url:"https://mollymaguiresphoenixville.com/music/"},
-  {date:"2026-07-04", time:"Evening", title:"Cosmic Kittens (Live Music)", venue:"Molly Maguire's, 197 Bridge St", src:"taproom",
-   blurb:"Fourth of July live music at Molly Maguire's. Part of the America 250th weekend celebration on Bridge Street.", url:"https://mollymaguiresphoenixville.com/music/"},
-  {date:"2026-07-01", end:"2026-07-12", time:"Daily", title:"Shorty's Short Film Contest", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
-   blurb:"The Colonial's carnival-themed short-film showcase runs across nearly two weeks on the historic screens.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-07-03", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"July's First Friday — live musicians throughout downtown, handmade craft vendors on Bridge Street, shops and restaurants open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-08-07", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"August First Friday — live musicians, street vendors, and late-night dining on Bridge Street.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-09-04", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"September First Friday — outdoor celebration with live music, craft vendors, and open-air dining.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-10-02", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"October First Friday — fall edition with live music, street vendors, and downtown shops open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-10-04", time:"All day", title:"PXV Inside Out — Last Weekend", venue:"Bridge Street, Downtown", src:"pxv_online",
-   blurb:"Final weekend of the summer open-air dining season on Bridge Street before the street reopens to traffic.", url:"https://phoenixville.online/pxv-inside-out-open-air-dining-experience/"},
-  {date:"2026-11-06", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"November First Friday — downtown shops, galleries and restaurants open late.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-12-04", time:"5:30–8:30pm", title:"First Friday", venue:"Bridge Street (100 & 200 blocks)", src:"pxv_online",
-   blurb:"December First Friday — holiday edition with live music and late-night downtown shopping.", url:"https://phoenixville.online/phoenixville-first-fridays/"},
-  {date:"2026-07-11", time:"All day", title:"BlobFest Street Fair (Camp Blobfest)", venue:"Bridge St & The Colonial Theatre", src:"festival",
-   blurb:"Phoenixville's beloved tribute to the 1958 film 'The Blob' — street fair, vendors and the famous run-out from the Colonial.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-07-16", time:"7:00pm", title:"Country Line Dance Night", venue:"Twelve78 Brewing Co., behind 35 Bridge St", src:"taproom",
-   blurb:"Beginner-friendly line dance instruction starts at 7pm with instructor Johanna, dancing until 9pm. $15 — grab a pint and learn some new moves.", url:"https://www.twelve78brewing.com/event-calendar/"},
-  {date:"2026-07-18", time:"6:00–9:00pm", title:"Philly Grass (Live Bluegrass)", venue:"Twelve78 Brewing Co., behind 35 Bridge St", src:"taproom",
-   blurb:"Authentic live bluegrass — guitar, banjo, bass and more — on a summer Saturday evening at Twelve78.", url:"https://www.twelve78brewing.com/event-calendar/"},
-  {date:"2026-07-17", time:"7:00pm", title:"Emily McIntire · 'Forsaking Midnight'", venue:"The Colonial Theatre (w/ Reads & Company)", src:"library",
-   blurb:"Reads & Company hosts the bestselling author for a launch event across the street at the Colonial.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-07-18", time:"8:00pm", title:"Stewart Copeland", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
-   blurb:"The Police co-founder, film composer and Rock & Roll Hall of Famer live on the main stage.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-07-25", time:"8:00pm", title:"Winslow — An Evening of the Eagles", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
-   blurb:"Tribute night running the catalog of the Eagles in full.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-08-22", time:"All day", title:"Colonial Gardens Butterfly Festival", venue:"Phoenixville", src:"festival",
-   blurb:"Late-summer family festival celebrating pollinators and gardens.", url:"https://www.phoenixville.org/Calendar.aspx"},
-  {date:"2026-09-05", time:"All day", title:"Phoenixville Blues Festival", venue:"Downtown Phoenixville", src:"festival",
-   blurb:"Annual blues festival bringing live acts to the heart of town.", url:"https://www.phoenixville.org/Calendar.aspx"},
-  {date:"2026-10-07", time:"7:30pm", title:"The Buena Vista Orchestra", venue:"The Colonial Theatre, 227 Bridge St", src:"colonial",
-   blurb:"Cuban-rooted big-band sound on the Colonial's main stage.", url:"https://thecolonialtheatre.com/events/"},
-  {date:"2026-11-19", time:"6:00–9:00pm", title:"Jill Baldassari (Live)", venue:"The Boardroom, 101 Bridge St", src:"taproom",
-   blurb:"An evening of live acoustic music at The Boardroom Restaurant & Bottle Shop.", url:"https://www.theboardroompxv.com/"}
-];
-
-/* ---------- Civic note (recurring borough meetings) ---------- */
-const CIVIC = [
-  {date:"recurring", time:"2nd Tuesday · 7–9pm", title:"Borough Council Meeting (Hybrid)", venue:"Borough Hall Council Chambers, 351 Bridge St", src:"borough",
-   blurb:"Regular council session, in person and online. Committee, Planning, Zoning and board meetings also run monthly — see the borough calendar for exact dates.", url:"https://www.phoenixville.org/Calendar.aspx"}
-];
-
-/* ---------- More on the Colonial marquee (touring acts; dates at box office) ---------- */
-const MARQUEE = [
-  {title:"A.J. Croce — Croce Plays Croce", note:"50 years of Jim Croce's music, performed by his son.", src:"colonial"},
-  {title:"The Garcia Project — Days Between", note:"Jerry Garcia Band tribute for the early-August Days Between celebration.", src:"colonial"},
-  {title:"Friends of the Brothers", note:"Honoring the Allman Brothers Band.", src:"colonial"},
-  {title:"Pet Sounds Live", note:"The Beach Boys' landmark album, start to finish.", src:"colonial"},
-  {title:"Total Mass Retain", note:"A tribute to Yes.", src:"colonial"},
-  {title:"Magical Mystery Doors", note:"Beatles / Led Zeppelin / Doors tribute night.", src:"colonial"},
-  {title:"Unforgettable Fire", note:"One of America's first U2 tribute bands.", src:"colonial"},
-  {title:"Mamma Mania!", note:"New York City's premier ABBA tribute.", src:"colonial"},
-  {title:"It's Sondheim, Diva!", note:"Opens the Stage Door Series — Broadway brilliance and powerhouse vocals.", src:"colonial"},
-  {title:"Larry & Joe", note:"Venezuelan llanera meets GRAMMY-nominated bluegrass.", src:"colonial"},
-  {title:"The Rocky Horror Picture Show", note:"The cult classic on the big screen — bring your toast.", src:"colonial"}
-];
-
-/* ---------- Where the music plays: local venues & taprooms (real) ---------- */
-const VENUES = [
-  {name:"Steel City Coffeehouse & Brewery", kind:"Listening room · open mic · brewery", addr:"203 Bridge St", src:"steel", url:"https://www.steelcityphx.com/concerts-and-events"},
-  {name:"Sly Fox Brewhouse & Eatery", kind:"Pioneering brewpub (est. 1995) · live music", addr:"Phoenixville (just off downtown)", src:"taproom", url:null},
-  {name:"Rebel Hill Brewing — Downtown", kind:"10-bbl brewpub · cocktails · full kitchen", addr:"242 Bridge St", src:"taproom", url:"https://www.rebelhillbrewing.com/"},
-  {name:"Root Down Brewing Company", kind:"Big timber-beamed taproom · food & music", addr:"1 N. Main St", src:"taproom", url:"https://www.rootdownbrewing.com/"},
-{name:"Stable 12 Brewing Company", kind:"Craft brewery · full food menu", addr:"Phoenixville", src:"taproom", url:"https://www.stable12.com/"},
-  {name:"Iron Hill Brewery & Restaurant", kind:"20+ years of craft beer & handcrafted food", addr:"130 Bridge St", src:"taproom", url:"https://www.ironhillbrewery.com/"},
-  {name:"The Boardroom Restaurant & Bottle Shop", kind:"Restaurant · bottle shop · Boardroom Spirits cocktails · live music", addr:"101 Bridge St", src:"taproom", url:"https://www.theboardroompxv.com/"},
-  {name:"Twelve78 Brewing Co.", kind:"Family-owned brewery · live music · trivia · food trucks", addr:"Behind 35 Bridge St", src:"taproom", url:"https://www.twelve78brewing.com/event-calendar/"},
-  {name:"Bluebird Distilling", kind:"Craft distillery & cocktail bar · events & tastings", addr:"100 Bridge St", src:"taproom", url:"https://www.bluebirddistilling.com/"},
-  {name:"Molly Maguire's Irish Restaurant & Pub", kind:"Irish pub · rooftop deck · nightly specials", addr:"197 Bridge St", src:"taproom", url:"https://mollymaguiresphoenixville.com/"},
-  {name:"The Rec Room", kind:"Conshohocken Brewing taproom · food · event space", addr:"230 Bridge St", src:"taproom", url:"https://conshohockenbrewing.com/recroommain"},
-  {name:"Bistro on Bridge", kind:"30+ taps · beer garden · live music upstairs (Thu & Sat)", addr:"212 Bridge St", src:"taproom", url:"https://bistroonbridge.com/"}
-];
-
-/* ---------- Signature annual festivals ---------- */
-const ANNUAL = [
-  {mon:"DEC", title:"Firebird Festival", when:"Early December", src:"festival",
-   blurb:"The town's namesake tradition: a giant wooden phoenix is set ablaze at nightfall, with drumming, fire-spinning and food. Watch the borough calendar for the date.", url:"https://www.phoenixville.org/Calendar.aspx"},
-  {mon:"APR", title:"Dogwood Festival", when:"Spring", src:"festival",
-   blurb:"One of Phoenixville's longest-running traditions, celebrating the bloom of the dogwoods with community events around town.", url:"https://www.phoenixville.org/Calendar.aspx"},
-  {mon:"JUL", title:"Blobfest", when:"Mid-July", src:"festival",
-   blurb:"The legendary three-day tribute to 1958's 'The Blob' (filmed here) — street fair, screenings and the famous run-out from the Colonial.", url:"https://thecolonialtheatre.com/events/"}
-];
-
 /* ============ Render ============ */
 const MON=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const DOW=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
@@ -546,10 +175,14 @@ function eventCard(o){
   const dbox=o.date==="recurring"
     ? `<div class="datebox"><div class="mon">Every</div><div class="num">·</div><div class="dow">month</div></div>`
     : `<div class="datebox"><div class="mon">${MON[d.getMonth()]}</div><div class="num">${d.getDate()}</div><div class="dow">${DOW[d.getDay()]}</div></div>`;
+  const l=logo(domainOf(o.url));
   return `<article class="card" style="--accent:${SOURCES[o.src].color}">
     ${dbox}
     <div class="body">
-      <h3>${o.title}</h3>
+      <div class="body-head">
+        ${l?`<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">`:""}
+        <h3>${o.title}</h3>
+      </div>
       <div class="meta"><span class="time">${o.time}</span><span>${o.venue||""}</span></div>
       <p class="blurb">${o.blurb||""}</p>
       <div class="card-foot">${srcStamp(o.src)}<a class="out" href="${o.url}" target="_blank" rel="noopener">Details ↗</a></div>
@@ -566,7 +199,7 @@ function render(){
        <div class="cadence">${r.cadence}</div>
        <h3>${r.title}</h3>
        <p>${r.text}</p>
-       <div class="src">${srcStamp(r.src)}</div>
+       <div class="card-foot">${srcStamp(r.src)}<a class="out" href="${r.url||SOURCES[r.src].url}" target="_blank" rel="noopener">Details ↗</a></div>
      </div>`).join("")
     : `<p class="section-note" style="grid-column:1/-1">No weekly happenings match this filter.</p>`;
   document.getElementById("rec-note").textContent = recVis.length? `${recVis.length} regular` : "";
@@ -599,13 +232,14 @@ function render(){
   /* annual festivals */
   const annualWrap=document.getElementById("annual");
   const annVis=ANNUAL.filter(matches);
-  annualWrap.innerHTML = annVis.length ? annVis.map(a=>
-    `<div class="rec-card" style="--accent:${SOURCES[a.src].color}">
+  annualWrap.innerHTML = annVis.length ? annVis.map(a=>{
+    const l=logo(domainOf(a.url));
+    return `<div class="rec-card" style="--accent:${SOURCES[a.src].color}">
        <div class="cadence">${a.mon} · ${a.when}</div>
-       <h3>${a.title}</h3>
+       <div class="body-head">${l?`<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">`:""}<h3>${a.title}</h3></div>
        <p>${a.blurb}</p>
        <div class="card-foot" style="margin-top:.6rem"><a class="out" href="${a.url}" target="_blank" rel="noopener">Details ↗</a></div>
-     </div>`).join("")
+     </div>`;}).join("")
     : `<p class="section-note" style="grid-column:1/-1">No annual festivals match this filter.</p>`;
   document.querySelector('.section-label:nth-of-type(3)').style.display = annVis.length?'':'none';
 
@@ -625,9 +259,12 @@ function render(){
   const venVis=VENUES.filter(matches);
   venWrap.innerHTML = venVis.length ? venVis.map(v=>
     `<div class="venue-card" style="--accent:${SOURCES[v.src].color}">
-       <h3>${v.name}</h3>
-       <p class="kind">${v.kind}</p>
-       <p class="addr">${v.addr}${v.url?`<a href="${v.url}" target="_blank" rel="noopener">Visit ↗</a>`:""}</p>
+       ${v.logo?`<img class="venue-logo" src="${v.logo}" alt="" loading="lazy" onerror="this.remove()">`:""}
+       <div class="venue-body">
+         <h3>${v.name}</h3>
+         <p class="kind">${v.kind}</p>
+         <p class="addr">${v.addr}${v.url?`<a href="${v.url}" target="_blank" rel="noopener">Visit ↗</a>`:""}</p>
+       </div>
      </div>`).join("")
     : `<p class="section-note" style="grid-column:1/-1">No venues match this filter.</p>`;
   document.getElementById("venue-note").textContent = venVis.length? `${venVis.length} spots` : "";
@@ -636,93 +273,60 @@ function render(){
 
 document.getElementById("search").addEventListener("input",e=>{query=e.target.value.trim().toLowerCase();render();});
 
-/* Rising mini-phoenixes */
+/* Rising embers */
 (function(){
   const reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if(reduce) return;
   const box=document.getElementById("embers");
-  const NS="http://www.w3.org/2000/svg";
-  const paths=[
-    ["M40 45 C25 35 8 28 2 32 C0 35 2 38 8 37 C18 36 30 42 40 52Z","#ff8a3d"],
-    ["M60 45 C75 35 92 28 98 32 C100 35 98 38 92 37 C82 36 70 42 60 52Z","#ff8a3d"],
-    ["M50 18 C46 28 43 40 44 52 C46 60 48 66 50 70 C52 66 54 60 56 52 C57 40 54 28 50 18Z","#ffd166"],
-    ["M47 14 L50 19 L53 14Z","#ffb347"],
-    ["M50 6 C49 2 47 0 48 -2 C50 0 50 4 50 6Z","#ffe082"],
-    ["M50 6 C51 2 53 0 52 -2 C50 0 50 4 50 6Z","#ffe082"],
-    ["M45 70 C41 79 40 89 43 97 C46 89 48 79 50 74Z","#ff6a2c"],
-    ["M55 70 C59 79 60 89 57 97 C54 89 52 79 50 74Z","#ff6a2c"],
-    ["M39 72 C33 82 31 93 35 101 C40 92 44 82 48 76Z","#ff5020"],
-    ["M61 72 C67 82 69 93 65 101 C60 92 56 82 52 76Z","#ff5020"]
-  ];
-  for(let i=0;i<22;i++){
-    const svg=document.createElementNS(NS,"svg");
-    svg.setAttribute("viewBox","0 0 100 108");
-    svg.setAttribute("fill","none");
-    svg.classList.add("ember");
-    svg.style.left=Math.random()*100+"%";
-    svg.style.setProperty("--drift",(Math.random()*70-35)+"px");
-    svg.style.animationDuration=(7+Math.random()*9)+"s";
-    svg.style.animationDelay=(Math.random()*12)+"s";
-    const sz=10+Math.random()*14;
-    svg.style.width=sz+"px";
-    svg.style.height=(sz*1.08)+"px";
-    paths.forEach(([d,fill])=>{
-      const p=document.createElementNS(NS,"path");
-      p.setAttribute("d",d);
-      p.setAttribute("fill",fill);
-      p.setAttribute("opacity","0.85");
-      svg.appendChild(p);
-    });
-    box.appendChild(svg);
+  const colors=["#ff8a3d","#ffb347","#ff6a2c","#ffd166","#ffe082","#ff4d1c","#ffba5c"];
+  for(let i=0;i<190;i++){
+    const el=document.createElement("div");
+    el.classList.add("ember");
+    el.style.left=Math.random()*100+"%";
+    el.style.setProperty("--drift",(Math.random()*60-30)+"px");
+    el.style.animationDuration=(5+Math.random()*9)+"s";
+    el.style.animationDelay=(Math.random()*14)+"s";
+    const w=2+Math.random()*5;
+    el.style.width=w+"px";
+    el.style.height=(w*1.1+Math.random()*w*.9)+"px";
+    const c=colors[Math.floor(Math.random()*colors.length)];
+    el.style.background=`radial-gradient(ellipse at 50% 65%,${c} 0%,rgba(255,120,0,.25) 55%,transparent 100%)`;
+    if(Math.random()>.6) el.style.filter=`blur(${.2+Math.random()*.6}px)`;
+    box.appendChild(el);
   }
 })();
 
-/* ---------- Live event aggregation ---------- */
-async function loadLiveEvents() {
-  const statusEl = document.getElementById('live-status');
-  if (!TM_KEY) {
-    if (statusEl) statusEl.innerHTML = '<a href="https://developer.ticketmaster.com/" target="_blank" rel="noopener" style="color:var(--spark);font-family:\'JetBrains Mono\',monospace;font-size:.72rem;">Add Ticketmaster API key for live events ↗</a>';
-    return;
-  }
-  if (statusEl) statusEl.textContent = 'Loading live events…';
-  try {
-    const today = new Date().toISOString().slice(0,10) + 'T00:00:00Z';
-    const url = `https://app.ticketmaster.com/discovery/v2/events.json?postalCode=19460&radius=8&unit=miles&size=100&sort=date,asc&startDateTime=${today}&apikey=${TM_KEY}`;
-    const resp = await fetch(url);
-    const data = await resp.json();
-    const raw = data?._embedded?.events || [];
-    const todayStr = new Date().toISOString().slice(0,10);
-    let added = 0;
-    raw.forEach(e => {
-      const date = e.dates?.start?.localDate || '';
-      if (!date || date < todayStr) return;
-      const tRaw = e.dates?.start?.localTime;
-      const time = tRaw ? new Date('1970-01-01T'+tRaw).toLocaleTimeString('en-US',{hour:'numeric',minute:'2-digit'}) : 'TBA';
-      const genre = [e.classifications?.[0]?.segment?.name, e.classifications?.[0]?.genre?.name].filter(Boolean).join(' · ');
-      const ev = {
-        date, time,
-        title: e.name,
-        venue: e._embedded?.venues?.[0]?.name || 'Phoenixville area',
-        src: 'ticketmaster',
-        blurb: genre || 'Live event near Phoenixville',
-        url: e.url
-      };
-      if (!allDated.find(x => x.title === ev.title && x.date === ev.date)) {
-        allDated.push(ev);
-        added++;
-      }
-    });
-    if (statusEl) statusEl.textContent = added ? `+${added} live events loaded` : 'Live events up to date';
-    render();
-  } catch(err) {
-    console.warn('Ticketmaster fetch failed:', err);
-    if (statusEl) statusEl.textContent = '';
-  }
-}
+/* Today banner label */
+(function(){
+  const d=new Date();
+  const names=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  const el=document.getElementById("today-day-label");
+  if(el) el.textContent="— "+names[d.getDay()];
+})();
 
 buildChips();
 render();
-loadLiveEvents();
+
+/* Collapse controls once scrolled past their natural position */
+(function(){
+  const ctrl=document.querySelector('.controls');
+  if(!ctrl) return;
+  const sentinel=document.createElement('div');
+  ctrl.before(sentinel);
+  new IntersectionObserver(([e])=>ctrl.classList.toggle('hide',!e.isIntersecting)).observe(sentinel);
+})();
+
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
 </script>
 </body>
 </html>

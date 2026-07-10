@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>Live Music in Phoenixville, PA — Shows, Venues & Weekly Nights</title>
+<meta name="description" content="Live music in Phoenixville, PA — upcoming shows at the Colonial Theatre, weekly nights at Steel City, Bistro on Bridge, Twelve78, Stable 12, and more.">
+<link rel="canonical" href="https://phoenixville.info/music.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/music.html">
+<meta property="og:title" content="Live Music in Phoenixville, PA">
+<meta property="og:description" content="Upcoming shows and weekly live music nights across Phoenixville — the Colonial Theatre, Steel City, Bridge Street bars, and beyond.">
+<meta property="og:site_name" content="Phoenixville Events">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Live Music in Phoenixville, PA">
+<meta name="twitter:description" content="Upcoming shows and weekly live music nights in Phoenixville.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">&#8592; Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html" class="active">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">
+      <svg width="18" height="18" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 3c2 4 1 6-1 8 3-1 5 0 6 3 1-3 3-3 5-2-2 5-6 7-6 7 4 0 6 3 6 3-3 1-5 0-7-1 1 3 0 6-3 8-3-2-4-5-3-8-2 1-4 2-7 1 0 0 2-3 6-3 0 0-4-2-6-7 2-1 4-1 5 2 1-3 3-4 6-3-2-2-3-4-1-8z" fill="url(#sg)"/>
+        <defs><linearGradient id="sg" x1="6" y1="3" x2="26" y2="30"><stop stop-color="#ff4d1c"/><stop offset="1" stop-color="#ffc24a"/></linearGradient></defs>
+      </svg>
+      Phoenixville &middot; Chester County, PA
+    </p>
+    <h1 class="page-title">Live Music</h1>
+    <p class="lede">Upcoming shows and weekly nights — the Colonial Theatre, Steel City, Bridge Street bars, and every stage worth knowing.</p>
+    <div class="molten"></div>
+  </div>
+</header>
+
+<main>
+
+  <h2 class="section-label" id="shows-label">Upcoming Shows</h2>
+  <div class="shows-grid" id="shows-grid"></div>
+
+  <h2 class="section-label">Every Week</h2>
+  <div class="weekly-grid" id="weekly-grid"></div>
+
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p>Phoenixville Events Feed &middot; Not affiliated with the Borough of Phoenixville</p>
+    <p><a href="index.html">&#8592; Back to Events</a></p>
+  </div>
+</footer>
+
+<script>
+const SHOWS = [
+  {date:"2026-07-03", time:"Evening",      title:"Leading Zero",                              venue:"Molly Maguire's · 197 Bridge St",         genre:"Rock",            colonial:false, blurb:"Live band at Molly Maguire's as part of the America 250th Celebration weekend. Rooftop deck open.",              url:"https://mollymaguiresphoenixville.com/music/"},
+  {date:"2026-07-04", time:"Evening",      title:"Cosmic Kittens",                            venue:"Molly Maguire's · 197 Bridge St",         genre:"Rock",            colonial:false, blurb:"Fourth of July live music at Molly Maguire's — part of the America 250th weekend on Bridge Street.",             url:"https://mollymaguiresphoenixville.com/music/"},
+  {date:"2026-07-10", time:"Evening",      title:"Blob Ball",                                 venue:"The Colonial Theatre · 227 Bridge St",    genre:"Various",         colonial:true,  blurb:"BlobFest's signature gala — live music and carnival entertainment on the eve of the 1958 Blob's famous scene.", url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-07-18", time:"6:00–9:00pm", title:"Philly Grass",                              venue:"Twelve78 Brewing · behind 35 Bridge St", genre:"Bluegrass",       colonial:false, blurb:"Authentic live bluegrass — guitar, banjo, bass and more — on a summer Saturday evening at Twelve78.",           url:"https://www.twelve78brewing.com/event-calendar/"},
+  {date:"2026-07-18", time:"8:00pm",      title:"Stewart Copeland",                          venue:"The Colonial Theatre · 227 Bridge St",    genre:"Rock",            colonial:true,  blurb:"The Police co-founder, film composer and Rock & Roll Hall of Famer — live on the Colonial's main stage.",       url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-07-24", time:"Evening",      title:"Unforgettable Fire — U2 Tribute",           venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"One of America's first U2 tribute acts runs the full catalog — 25 years at prestigious venues.",                url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-07-24", time:"Evening",      title:"Stage Door: It's Sondheim, Diva!",          venue:"The Colonial Theatre · 227 Bridge St",    genre:"Musical Theatre", colonial:true,  blurb:"Walnut Street Theatre alumni deliver powerhouse Stephen Sondheim performances to open the Stage Door Series.", url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-07-25", time:"8:00pm",      title:"Winslow — An Evening of the Eagles",        venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"Tribute night running the full catalog of the Eagles.",                                                           url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-08-05", time:"Evening",      title:"AJ Croce — Croce Plays Croce",              venue:"The Colonial Theatre · 227 Bridge St",    genre:"Folk / Pop",      colonial:true,  blurb:"50 years of Jim Croce's music performed by his son, piano virtuoso AJ Croce — a rare intergenerational night.", url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-08-08", time:"Evening",      title:"The Garcia Project",                        venue:"The Colonial Theatre · 227 Bridge St",    genre:"Jam",             colonial:true,  blurb:"Nationally touring ensemble celebrates Jerry Garcia's Days Between on the Colonial stage.",                       url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-08-28", time:"Evening",      title:"Larry & Joe",                               venue:"The Colonial Theatre · 227 Bridge St",    genre:"World / Folk",    colonial:true,  blurb:"Venezuelan llanera legend Larry Bellorín teams with GRAMMY-nominated bluegrass musician Joe Troop.",           url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-09-05", time:"All day",      title:"Phoenixville Blues Festival",               venue:"Downtown Phoenixville",                   genre:"Blues",           colonial:false, blurb:"Annual blues festival bringing live acts to the heart of town.",                                                  url:"https://www.phoenixville.org/Calendar.aspx"},
+  {date:"2026-09-11", time:"Evening",      title:"Mamma Mania! — ABBA Tribute",               venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"New York City's premier ABBA tribute performs all the classic 1970s hits.",                                    url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-09-18", time:"Evening",      title:"Pet Sounds Live!",                          venue:"The Colonial Theatre · 227 Bridge St",    genre:"Rock",            colonial:true,  blurb:"The Beach Boys' landmark Brian Wilson masterpiece performed start to finish.",                                   url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-09-25", time:"Evening",      title:"Friends of the Brothers — Allman Bros",     venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"Endorsed by founding Allman Brother Jaimoe — deep into the catalog of classic southern rock.",                  url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-10-07", time:"7:30pm",      title:"The Buena Vista Orchestra",                 venue:"The Colonial Theatre · 227 Bridge St",    genre:"Cuban / Jazz",    colonial:true,  blurb:"Cuban-rooted big-band sound on the Colonial's main stage.",                                                       url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-10-29", time:"Evening",      title:"Watsky — X Infinity 10th Anniversary",      venue:"The Colonial Theatre · 227 Bridge St",    genre:"Hip-Hop",         colonial:true,  blurb:"Rapper Watsky celebrates a decade of his genre-bending album with a live anniversary performance.",             url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-11-06", time:"Evening",      title:"RAEL — Genesis & Peter Gabriel Experience", venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"Meticulously staged tribute to early Genesis live performances — for fans of the prog-rock golden era.",       url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-11-07", time:"Evening",      title:"The Longest Johns",                         venue:"The Colonial Theatre · 227 Bridge St",    genre:"Folk",            colonial:true,  blurb:"Chart-topping British folk group performs rollicking sea shanties and folk anthems.",                            url:"https://thecolonialtheatre.com/events/"},
+  {date:"2026-11-19", time:"6:00–9:00pm", title:"Jill Baldassari",                           venue:"The Boardroom · 101 Bridge St",           genre:"Acoustic",        colonial:false, blurb:"An evening of live acoustic music at The Boardroom Restaurant & Bottle Shop.",                                   url:"https://www.theboardroompxv.com/"},
+  {date:"2027-01-23", time:"Evening",      title:"High Noon — Lynyrd Skynyrd Tribute",        venue:"The Colonial Theatre · 227 Bridge St",    genre:"Tribute",         colonial:true,  blurb:"The East Coast's premier southern rock tribute band plays all the 1970s classics live.",                        url:"https://thecolonialtheatre.com/events/"},
+];
+
+const WEEKLY = [
+  {cadence:"Thu evenings",                title:"Live Music at Steel City",            venue:"Steel City Coffeehouse · 203 Bridge St",  blurb:"Original music — acoustic, folk, singer-songwriter. Kitchen and taps open late on show nights.",             url:"https://www.steelcityphx.com/concerts-and-events"},
+  {cadence:"Weekly",                      title:"Open Mic Night",                      venue:"Steel City Coffeehouse · 203 Bridge St",  blurb:"Award-winning listening room — sign up, plug in, and take the room. All styles welcome.",                    url:"https://www.steelcityphx.com/concerts-and-events"},
+  {cadence:"Thu & Sat · ~9:30pm",        title:"Live Music at Bistro on Bridge",      venue:"Bistro on Bridge · 212 Bridge St",        blurb:"Bands most Thu & Sat in the upstairs Analog Bar Room — 30+ taps, beer garden, room to dance.",               url:"https://bistroonbridge.com/"},
+  {cadence:"Fri evenings · Sat & Sun pm",title:"Live Music at Twelve78",              venue:"Twelve78 Brewing · behind 35 Bridge St", blurb:"Bands on Fri evenings and weekend afternoons, plus Friday Music Bingo, food trucks, and line dancing.",       url:"https://www.twelve78brewing.com/event-calendar/"},
+  {cadence:"Weekends & First Fridays",   title:"Live Music at The Boardroom",         venue:"The Boardroom · 101 Bridge St",           blurb:"Acoustic singer-songwriters most weekends on the cozy stage — Boardroom Spirits cocktails and a full menu.",  url:"https://www.theboardroompxv.com/"},
+  {cadence:"Fri evenings",               title:"Live Music at Bluebird Distilling",   venue:"Bluebird Distilling · 100 Bridge St",     blurb:"Craft spirits poured alongside live music and tastings most Friday evenings.",                               url:"https://www.bluebirddistilling.com/"},
+  {cadence:"Fri & Sat evenings",         title:"Live Music at Stable 12",             venue:"Stable 12 Brewing · 368 Bridge St",       blurb:"Local acts on Fri and Sat evenings, full food menu and craft beers.",                                        url:"https://www.stable12.com/"},
+  {cadence:"Fri & Sat evenings",         title:"Live Music at Iron Hill Brewery",     venue:"Iron Hill Brewery · 130 Bridge St",       blurb:"Weekend live music alongside award-winning craft beers and a full kitchen.",                                  url:"https://www.ironhillbrewery.com/"},
+  {cadence:"Weekends",                   title:"Live Music at Root Down Brewing",     venue:"Root Down Brewing · 1 N. Main St",        blurb:"Local acts in the big timber-beamed taproom — craft beer, full food menu, room for the whole crew.",          url:"https://www.rootdownbrewing.com/"},
+  {cadence:"Weekends",                   title:"Events at The Rec Room",              venue:"The Rec Room · 230 Bridge St",            blurb:"Conshohocken Brewing's event space — weekend live music, themed nights, and the full Conshohocken tap list.", url:"https://conshohockenbrewing.com/recroommain"},
+  {cadence:"Weekends (varying times)",   title:"Live Irish Sessions",                 venue:"Molly Maguire's · 197 Bridge St",         blurb:"Traditional trad sessions — fiddles, bouzouki, bodhráns. Check their music calendar for set times.",         url:"https://mollymaguiresphoenixville.com/music/"},
+  {cadence:"Thu evenings",               title:"Events at Rebel Hill Brewing",        venue:"Rebel Hill Brewing · 242 Bridge St",      blurb:"Regular lineup of tap room events — trivia, themed nights, and live music alongside the craft beer menu.",    url:"https://www.rebelhillbrewing.com/"},
+  {cadence:"Sundays · 4–6pm (summer)",  title:"Phoenixville Music Series",           venue:"Downtown Phoenixville",                   blurb:"Free outdoor live-music sessions through the summer, organized by the borough on the community calendar.",    url:"https://www.phoenixville.org/Calendar.aspx"},
+];
+
+const MON = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const DOW = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+
+function fmtDate(iso){
+  const [y,m,d] = iso.split("-").map(Number);
+  const dt = new Date(y, m-1, d);
+  return `${DOW[dt.getDay()]} · ${MON[m-1]} ${d}`;
+}
+
+const today = new Date();
+today.setHours(0,0,0,0);
+
+const upcoming = SHOWS.filter(s => {
+  const [y,m,d] = s.date.split("-").map(Number);
+  return new Date(y,m-1,d) >= today;
+}).sort((a,b) => a.date.localeCompare(b.date));
+
+document.getElementById("shows-label").textContent =
+  `Upcoming Shows (${upcoming.length})`;
+
+function domainOf(url){ try{ return new URL(url).hostname.replace(/^www\./,""); }catch(e){ return null; } }
+function logo(domain){ return domain ? `https://www.google.com/s2/favicons?sz=64&domain=${domain}` : null; }
+
+document.getElementById("shows-grid").innerHTML = upcoming.map(s => {
+  const l = logo(domainOf(s.url));
+  return `
+  <div class="show-card${s.colonial?" colonial":""}">
+    <div class="show-date">${fmtDate(s.date)} &middot; ${s.time}</div>
+    <div class="card-head">${l?`<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">`:""}<h2 class="show-title">${s.title}</h2></div>
+    <p class="show-venue">&#127932; ${s.venue}</p>
+    <p class="show-blurb">${s.blurb}</p>
+    <span class="show-genre">${s.genre}</span>
+    ${s.url ? `<a class="show-link" href="${s.url}" target="_blank" rel="noopener">Tickets / Info &#8599;</a>` : ""}
+  </div>
+`;}).join("");
+
+document.getElementById("weekly-grid").innerHTML = WEEKLY.map(w => {
+  const l = logo(domainOf(w.url));
+  return `
+  <div class="weekly-card">
+    <div class="cadence">${w.cadence}</div>
+    <div class="card-head">${l?`<img class="card-logo" src="${l}" alt="" loading="lazy" onerror="this.remove()">`:""}<h2 class="weekly-title">${w.title}</h2></div>
+    <p class="weekly-venue">&#127932; ${w.venue}</p>
+    <p class="weekly-blurb">${w.blurb}</p>
+    ${w.url ? `<a class="weekly-link" href="${w.url}" target="_blank" rel="noopener">More info &#8599;</a>` : ""}
+  </div>
+`;}).join("");
+
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>

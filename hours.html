@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>Happy Hour Specials in Phoenixville, PA — Daily Deals at 20+ Bars</title>
+<meta name="description" content="Happy hour deals at 20+ bars and restaurants in and around Phoenixville, PA. Filter by day to find drink specials, food deals, and discounts near Bridge Street.">
+<link rel="canonical" href="https://phoenixville.info/hours.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/hours.html">
+<meta property="og:title" content="Happy Hour Specials in Phoenixville, PA — Daily Deals at 20+ Bars">
+<meta property="og:description" content="Happy hour deals at 20+ bars and restaurants near Phoenixville, PA. Filter by day to find drink specials and food deals near Bridge Street.">
+<meta property="og:site_name" content="Phoenixville Events">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Happy Hour Specials in Phoenixville, PA">
+<meta name="twitter:description" content="Filter 20+ happy hour deals near Phoenixville by day of week.">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Happy Hour Specials in Phoenixville, PA","url":"https://phoenixville.info/hours.html","description":"Daily happy hour deals at 20+ bars and restaurants in and around Phoenixville, PA","isPartOf":{"@type":"WebSite","name":"Phoenixville Events","url":"https://phoenixville.info/"}}</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="hours.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">← Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html" class="active">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      Phoenixville · 5-Mile Radius
+    </p>
+    <h1 class="page-title">Happy Hours</h1>
+    <p class="lede">Every confirmed happy hour deal in and around Phoenixville — exact prices, exact times, no guessing.</p>
+    <div class="molten"></div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Filter by day">
+  <div class="controls-inner">
+    <span class="day-label">Show me</span>
+    <div id="chips"></div>
+    <span class="count" id="count"></span>
+  </div>
+</nav>
+
+<main>
+  <div class="grid" id="grid"></div>
+</main>
+
+<p class="disclaimer">Prices and times sourced from venue websites, County Lines Magazine, and Phoenixville Curated — last verified July 2026. Deals change; always confirm before you go.</p>
+
+<footer>
+  <div class="foot-inner">
+    <p>Phoenixville Events · Not affiliated with the Borough of Phoenixville</p>
+    <p><a href="index.html">← Back to Events</a></p>
+  </div>
+</footer>
+
+<script>
+/* days: 0=Sun,1=Mon,2=Tue,3=Wed,4=Thu,5=Fri,6=Sat */
+const HH = [
+  {
+    name: "Bistro on Bridge",
+    addr: "212 Bridge St",
+    when: "Mon–Fri · 4–6pm",
+    days: [1,2,3,4,5],
+    highlight: true,
+    deals: [
+      {cat:"Beer",    price:"$5",  items:"Allagash White, Modelo Especial, Sly Fox Helles"},
+      {cat:"Wine",    price:"$8",  items:"house wine by the glass"},
+      {cat:"Cocktail",price:"$9",  items:"Moscow mule, old fashioned, orange crush"},
+      {cat:"Food",    price:"$1",  items:"oysters — buck-a-shuck (6 or 12)"},
+      {cat:"Food",    price:"$6",  items:"fresh cut, truffle, or sweet potato fries"},
+      {cat:"Food",    price:"$9",  items:"mozzarella sticks, wings, flatbreads, buffalo chicken dip"},
+    ],
+    url: "https://bistroonbridge.com/"
+  },
+  {
+    name: "Bluebird Distilling",
+    addr: "100 Bridge St",
+    when: "Mon–Thu · 4–6:30pm  |  Sun · 8–10pm",
+    days: [0,1,2,3,4],
+    deals: [
+      {cat:"Cocktail",price:"$3 off", items:"all house & classic cocktails (weekdays)"},
+      {cat:"Spirits", price:"$9",     items:"flights and highballs (weekdays)"},
+      {cat:"Cocktail",price:"$3 off", items:"cocktails (Sunday 8–10pm)"},
+      {cat:"Spirits", price:"$9",     items:"2 oz. straight pours (Sunday 8–10pm)"},
+    ],
+    url: "https://www.bluebirddistilling.com/"
+  },
+  {
+    name: "The Boardroom",
+    addr: "101 Bridge St",
+    when: "Sun–Thu · 4–6pm",
+    days: [0,1,2,3,4],
+    deals: [
+      {cat:"Beer",    price:"$3",  items:"Kenwood Light Lager"},
+      {cat:"Beer",    price:"$8",  items:"lager + whiskey shot combo"},
+      {cat:"Wine",    price:"$9",  items:"house wine by the glass"},
+      {cat:"Cocktail",price:"$8",  items:"espresso martini, old fashioned"},
+      {cat:"Cocktail",price:"$5",  items:"canned cocktails"},
+      {cat:"Food",    price:"$4",  items:"snackers"},
+      {cat:"Food",    price:"$5",  items:"pommes frites"},
+      {cat:"Food",    price:"$6",  items:"Sicilian pizza"},
+      {cat:"Food",    price:"$8",  items:"single smash burgers"},
+      {cat:"Food",    price:"$10", items:"petite charcuterie board, oysters"},
+    ],
+    url: "https://www.theboardroompxv.com/"
+  },
+  {
+    name: "Sedona Taphouse",
+    addr: "131 Bridge St #5",
+    when: "Mon–Fri · 4–6pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"½ off",items:"most craft bottles and cans"},
+      {cat:"Wine",    price:"$7",  items:"house wine, sangria, margaritas"},
+      {cat:"Cocktail",price:"$8",  items:"select cocktails"},
+      {cat:"Food",    price:"$8–9",items:"truffle fries, flatbreads, sliders; mussels $12"},
+    ],
+    special: "Tuesdays: $7.90 house wine · $9.90 select craft classics\nWednesdays: ½ off all wine bottles · $20 off Reserve bottles (dine-in only)",
+    url: "https://www.sedonataphouse.com/locations/phoenixville-pa/"
+  },
+  {
+    name: "Rebel Hill Brewing",
+    addr: "242 Bridge St",
+    when: "Tue–Thu · 5–7pm",
+    days: [2,3,4],
+    deals: [
+      {cat:"Beer",    price:"$5",     items:"select draft beers"},
+      {cat:"Cocktail",price:"$10",    items:"select cocktails"},
+      {cat:"Food",    price:"$3 off", items:"Bavarian pretzels, fried pickle chips"},
+    ],
+    special: "Tue: taco & margarita specials · Wed: wing specials · Thu: burger & fries with pint purchase",
+    url: "https://www.rebelhillbrewing.com/"
+  },
+  {
+    name: "Molly Maguire's",
+    addr: "197 Bridge St",
+    when: "Mon–Fri · 5–7pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Wine",    price:"$5",  items:"house wine"},
+      {cat:"Beer",    price:"$5",  items:"draft beers"},
+      {cat:"Spirits", price:"$4",  items:"well mixers"},
+      {cat:"Food",    price:"$7",  items:"colcannon potato balls, fried pickles, pretzel bites, mozz wedges"},
+    ],
+    special: "Daily rotating specials: beer Mon & Thu · margaritas Tue · whiskey Wed",
+    url: "https://mollymaguiresphoenixville.com/"
+  },
+  {
+    name: "Root Down Brewing",
+    addr: "1 N. Main St",
+    when: "Mon–Fri · 4–6pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$2 off", items:"select draft beers"},
+      {cat:"Food",    price:"$8",     items:"select appetizers"},
+    ],
+    url: "https://www.rootdownbrewing.com/"
+  },
+  {
+    name: "Rec Room",
+    addr: "230 Bridge St",
+    when: "Tue–Fri · 4–6pm",
+    days: [2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$4",   items:"Ring the Bell American Lager, Life Coach Hazy IPA"},
+      {cat:"Cocktail",price:"$6",   items:"Surfside and Stateside vodka canned cocktails"},
+      {cat:"Food",    price:"½ off",items:"all wings (five sauces)"},
+    ],
+    url: "https://conshohockenbrewing.com/recroommain"
+  },
+  {
+    name: "Rivertown Taps",
+    addr: "226 Bridge St",
+    when: "Wed–Fri · 4–6pm",
+    days: [3,4,5],
+    deals: [
+      {cat:"Beer",    price:"20% off",items:"all draft pours"},
+      {cat:"Wine",    price:"$10",    items:"wine by the glass"},
+      {cat:"Cocktail",price:"$10",    items:"select cocktails"},
+    ],
+    url: "https://www.rivertowntaps.com/"
+  },
+  {
+    name: "Great American Pub",
+    addr: "148 Bridge St",
+    when: "Mon–Fri · 4–6pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$3",  items:"Miller Lite draft"},
+      {cat:"Beer",    price:"$5",  items:"Allagash White, Sly Fox Helles, Levante"},
+      {cat:"Seltzer", price:"$5",  items:"White Claw"},
+      {cat:"Cocktail",price:"$8",  items:"orange crush, Moscow mule"},
+      {cat:"Food",    price:"$5–8",items:"salsa & chips, truffle fries, flatbread, pierogies, wings"},
+    ],
+    url: null
+  },
+  {
+    name: "La Patrona",
+    addr: "400 Bridge St",
+    when: "Mon–Fri · 4–6pm  |  Sat–Sun · 12–3pm",
+    days: [0,1,2,3,4,5,6],
+    deals: [
+      {cat:"Beer",    price:"$4",items:"draft beer"},
+      {cat:"Cocktail",price:"$7",items:"house margaritas"},
+      {cat:"Food",    price:"$6",items:"appetizers"},
+    ],
+    url: null
+  },
+  {
+    name: "Vintner's Table",
+    addr: "135 Bridge St",
+    when: "Tue–Fri · 4–6pm",
+    days: [2,3,4,5],
+    deals: [
+      {cat:"Wine",    price:"$12",   items:"Folino spritz, sangria"},
+      {cat:"Wine",    price:"$5",    items:"spritz & sangria cans"},
+      {cat:"Wine",    price:"$15",   items:"wine flights"},
+      {cat:"Food",    price:"$4 off",items:"charcuterie boards"},
+      {cat:"Food",    price:"$2 off",items:"Piccolini small plates"},
+    ],
+    url: null
+  },
+  {
+    name: "Tai Me Up",
+    addr: "301 Bridge St",
+    when: "Tue–Fri · 4–6pm",
+    days: [2,3,4,5],
+    deals: [
+      {cat:"Cocktail",price:"$2 off",items:"signature cocktails"},
+      {cat:"Cocktail",price:"$6",    items:"single house mixers"},
+      {cat:"Wine",    price:"$2 off",items:"wine by the glass"},
+      {cat:"Wine",    price:"$5 off",items:"wine bottles"},
+      {cat:"Food",    price:"$2 off",items:"appetizers"},
+    ],
+    url: null
+  },
+  {
+    name: "Il Granaio",
+    addr: "184 Bridge St",
+    when: "Mon–Fri · 4:30–6:30pm  |  Sat–Sun · 3–5pm",
+    days: [0,1,2,3,4,5,6],
+    deals: [
+      {cat:"",price:"",items:"Specials not listed online — check in for current drink deals"},
+    ],
+    url: null
+  },
+  {
+    name: "Fitzwater Station",
+    addr: "264 Canal St",
+    when: "Weekly rotating specials",
+    days: [0,1,2,3,4,5,6],
+    deals: [
+      {cat:"Beer",    price:"$2.50",  items:"Corona and Modelos (Tuesdays)"},
+      {cat:"Food",    price:"½ off",  items:"apps, burgers, and wings on select days"},
+    ],
+    url: null
+  },
+  {
+    name: "The Fenix Bar & Lounge",
+    addr: "193 Bridge St",
+    when: "Thu–Sat · 5–7pm",
+    days: [4,5,6],
+    deals: [
+      {cat:"Cocktail",price:"½ off",items:"all martinis"},
+    ],
+    url: "https://thefenixbar.com/"
+  },
+  {
+    name: "Fun Dungeon Brewcade",
+    addr: "119 S. Main St",
+    when: "Mon–Thu · 5–7pm",
+    days: [1,2,3,4],
+    deals: [
+      {cat:"Beer",    price:"½ off",items:"all draft beers"},
+      {cat:"Games",   price:"$15",  items:"unlimited gameplay during happy hour"},
+    ],
+    url: null
+  },
+  {
+    name: "Sly Fox Brewhouse",
+    addr: "520 Kimberton Rd",
+    when: "Mon–Fri · 3–6pm  |  Sun · 1–5pm",
+    days: [0,1,2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$1.50 off",items:"any draft pour (18 taps)"},
+      {cat:"Food",    price:"$2 off",   items:"select appetizers"},
+      {cat:"Combo",   price:"$8",       items:"pint + 7 wings"},
+    ],
+    url: null
+  },
+  {
+    name: "Lock 29",
+    addr: "127 Bridge St, Mont Clare",
+    when: "Mon–Fri · 3–6pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Spirits", price:"$2",    items:"well drinks (3–4pm)"},
+      {cat:"Spirits", price:"$4",    items:"call drinks (3–4pm)"},
+      {cat:"Spirits", price:"$5",    items:"premium drinks (3–4pm)"},
+      {cat:"Beer",    price:"$4",    items:"domestic beer (after 4pm)"},
+      {cat:"Beer",    price:"$5",    items:"IPA cans (after 4pm)"},
+      {cat:"Wine",    price:"$2 off",items:"wine by the glass (after 4pm)"},
+      {cat:"Food",    price:"$5",    items:"truffle popcorn, sesame garlic edamame"},
+    ],
+    special: "Beat the Clock 3–4pm: drinks start at $2 and rise each hour",
+    url: null
+  },
+  {
+    name: "Stone House Grille",
+    addr: "1300 Hares Hill Rd",
+    when: "Tue–Fri · 3–5pm",
+    days: [2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$1 off",items:"select draft beers"},
+      {cat:"Wine",    price:"$1 off",items:"select wines"},
+    ],
+    url: null
+  },
+  {
+    name: "Liberty Union Bar & Grill",
+    addr: "Near Phoenixville",
+    when: "Mon–Fri · 4–6pm",
+    days: [1,2,3,4,5],
+    deals: [
+      {cat:"Beer",    price:"$1 off",items:"all 12 draft beers"},
+      {cat:"Cocktail",price:"$8",    items:"lemon drop martinis, Moscow mules"},
+      {cat:"Food",    price:"$6",    items:"tots, pretzels, hummus, onion soup"},
+      {cat:"Food",    price:"$10",   items:"wings, poutine tots, margarita flatbread, ahi tuna"},
+    ],
+    url: null
+  },
+];
+
+const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const TODAY = new Date().getDay();
+let active = TODAY;
+
+/* Build day chips */
+const chipWrap = document.getElementById("chips");
+[["Today", TODAY], ...DAYS.map((d,i)=>[d,i])].forEach(([label, dayIdx]) => {
+  const b = document.createElement("button");
+  b.className = "chip";
+  b.textContent = label;
+  b.dataset.day = dayIdx;
+  b.setAttribute("aria-pressed", label === "Today");
+  b.addEventListener("click", () => {
+    active = parseInt(b.dataset.day);
+    chipWrap.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+    render();
+  });
+  chipWrap.appendChild(b);
+});
+
+function render() {
+  const grid = document.getElementById("grid");
+  let shown = 0;
+  grid.querySelectorAll(".card").forEach(card => {
+    const days = JSON.parse(card.dataset.days);
+    const ok = days.includes(active);
+    card.classList.toggle("hidden", !ok);
+    if (ok) shown++;
+  });
+  let empty = grid.querySelector(".empty");
+  if (!empty) { empty = document.createElement("p"); empty.className = "empty"; grid.appendChild(empty); }
+  const dayName = active === TODAY ? "today" : DAYS[active].toLowerCase() + "s";
+  empty.style.display = shown ? "none" : "block";
+  empty.textContent = "No happy hours found for " + dayName + ".";
+  document.getElementById("count").textContent = shown + " venue" + (shown === 1 ? "" : "s") + " on " + DAYS[active];
+}
+
+/* Build cards */
+const grid = document.getElementById("grid");
+HH.forEach(h => {
+  const card = document.createElement("div");
+  card.className = "card" + (h.highlight ? " highlight" : "");
+  card.dataset.days = JSON.stringify(h.days);
+
+  const dealsHTML = h.deals.map(d => `
+    <div class="deal-row">
+      ${d.cat ? `<span class="deal-cat">${d.cat}</span>` : ""}
+      ${d.price ? `<span class="deal-price">${d.price}</span>` : ""}
+      <span class="deal-items">${d.items}</span>
+    </div>`).join("");
+
+  card.innerHTML = `
+    <div>
+      <h3 class="card-name">${h.name}</h3>
+      <p class="card-addr">${h.addr}</p>
+    </div>
+    <div class="when">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      ${h.when}
+    </div>
+    <div class="deals">${dealsHTML}</div>
+    ${h.special ? `<div class="special">${h.special.replace(/\n/g,"<br>")}</div>` : ""}
+    ${h.url ? `<a class="card-link" href="${h.url}" target="_blank" rel="noopener">Visit website ↗</a>` : ""}
+  `;
+  grid.appendChild(card);
+});
+
+render();
+
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+
+</body>
+</html>

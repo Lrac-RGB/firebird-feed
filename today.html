@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KE9JGLTYC9"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KE9JGLTYC9');
+</script>
+<title>What's on Today — Phoenixville Events</title>
+<meta name="description" content="Everything happening in Phoenixville today — dated events, happy hours, recurring nights, and live music on Bridge Street.">
+<link rel="canonical" href="https://phoenixville.info/today.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://phoenixville.info/today.html">
+<meta property="og:title" content="What's on Today — Phoenixville Events">
+<meta property="og:description" content="Everything happening in Phoenixville today — dated events, happy hours, and recurring nights on Bridge Street.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.svg" sizes="any">
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="today.css">
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html" class="home">Phoenixville Events</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <svg width="20" height="14" viewBox="0 0 20 14" fill="currentColor" aria-hidden="true"><rect width="20" height="2" rx="1"/><rect y="6" width="20" height="2" rx="1"/><rect y="12" width="20" height="2" rx="1"/></svg>
+  </button>
+  <div class="nav-links">
+    <span class="sep">|</span>
+    <a href="today.html" class="active">Today</a>
+    <span class="sep">|</span>
+    <a href="restaurants.html">Restaurants</a>
+    <span class="sep">|</span>
+    <a href="businesses.html">Businesses</a>
+    <span class="sep">|</span>
+    <a href="hours.html">Happy Hours</a>
+    <span class="sep">|</span>
+    <a href="music.html">Live Music</a>
+    <span class="sep">|</span>
+    <a href="sponsors.html">Sponsors</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Phoenixville · Chester County, PA</p>
+    <h1 class="page-title" id="today-heading">Today</h1>
+    <p class="lede" id="today-lede">Everything happening in Phoenixville today.</p>
+    <div class="molten"></div>
+  </div>
+</header>
+
+<main>
+  <a href="index.html" class="back-link">← All events</a>
+
+  <h2 class="section-label" id="rec-label">Happening today</h2>
+  <div class="rec-grid" id="today-recurring"></div>
+</main>
+
+<footer>
+  <div class="foot-inner">
+    <p>Phoenixville Events · Not affiliated with the Borough of Phoenixville</p>
+    <p><a href="index.html">← Back to Events</a></p>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+const MON_LONG=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const DOW_LONG=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+const now=new Date();
+const dow=now.getDay();
+
+document.getElementById("today-heading").textContent=DOW_LONG[dow]+" · "+MON_LONG[now.getMonth()]+" "+now.getDate();
+document.getElementById("today-lede").textContent="Everything happening in Phoenixville on "+DOW_LONG[dow]+", "+MON_LONG[now.getMonth()]+" "+now.getDate()+", "+now.getFullYear()+" — dated events, happy hours, and recurring nights.";
+
+function srcStamp(src){
+  const s=SOURCES[src];
+  return `<span class="src"><span class="dot" style="background:${s.color}"></span>${s.label}</span>`;
+}
+
+/* Filter today's recurring entries */
+const todayRec=RECURRING.filter(r=>dayTest(r.cadence,dow));
+
+/* Render recurring */
+const recWrap=document.getElementById("today-recurring");
+if(todayRec.length){
+  recWrap.innerHTML=todayRec.map(r=>
+    `<div class="rec-card" style="--accent:${SOURCES[r.src].color}">
+       <div class="cadence">${r.cadence}</div>
+       <h3>${r.title}</h3>
+       <p>${r.text}</p>
+       <div class="card-foot">${srcStamp(r.src)}<a class="out" href="${r.url||SOURCES[r.src].url}" target="_blank" rel="noopener">Details ↗</a></div>
+     </div>`
+  ).join("");
+} else {
+  document.getElementById("rec-label").style.display="none";
+  recWrap.innerHTML=`<div class="empty">No regular nights scheduled for today.</div>`;
+}
+
+/* Nav hamburger */
+document.querySelector('.nav-toggle')?.addEventListener('click',function(){
+  const links=document.querySelector('.nav-links');
+  const open=links.classList.toggle('open');
+  this.setAttribute('aria-expanded',open);
+});
+document.querySelector('.nav-links')?.addEventListener('click',e=>{
+  if(e.target.tagName==='A'){
+    document.querySelector('.nav-links').classList.remove('open');
+    document.querySelector('.nav-toggle')?.setAttribute('aria-expanded','false');
+  }
+});
+</script>
+</body>
+</html>
